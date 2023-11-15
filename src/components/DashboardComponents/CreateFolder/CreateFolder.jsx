@@ -13,6 +13,11 @@ const CreateFolder = ({setIsCreateFolderOpen}) => {
 
     const{ userFolders , user, currentFolder, currentFolderData} = useSelector(
       (state) => ({
+
+//jo folder abhi open hai dashboard me uske ander jitne folder hai bo ha "userFolder" , jis user ke hai bo hai "user" or jis folder me uska name hai "currentFolder"  or ye sab help karenge new folder banane me;       useSelector ki help se redux se la rahe hai
+
+
+
       userFolders : state.filefolders.userFolders,
       user : state.auth.user,
       currentFolder : state.filefolders.currentFolder,
@@ -44,6 +49,8 @@ const CreateFolder = ({setIsCreateFolderOpen}) => {
         if(FolderName.length > 3 ){
           if(!checkFolderAlreadyPresent(FolderName)){
              
+ //here we are making new folder and send to the redux using dispatch
+
             const data = {
               createdAt : new Date(),
               name : FolderName,

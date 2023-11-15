@@ -27,12 +27,13 @@ const handleSubmit = (e) =>{
         toast.error("Password do not match ")
         return
     }
-    dispatch(signUpUser(name,email,password,setSuccess))
+    dispatch(signUpUser(name,email,password,setSuccess));//we are sending to the redux; authActionCreator signup;
 }
 
 React.useEffect(()=>{
     if(success){
-        navigate("/dashboard")
+         //jaise hi authActionCreator signup , success ko true kr dega then user will redirect to the dashboard page
+        navigate("/dashboard") 
     }
 },[success])
     return (

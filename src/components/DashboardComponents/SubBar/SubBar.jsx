@@ -15,6 +15,9 @@ const Subbar = ({
     const dispatch = useDispatch();
 
     const { currentFolder, user,currentFolderData, userFolders } = useSelector((state) => ({
+
+ //jo folder abhi open hai dashboard me uske ander jitne folder hai bo ha "userFolder" , jis user ke hai bo hai "user" or jis folder me uska name hai "currentFolder"  or ye sab help karenge new folder banane me;       useSelector ki help se redux se la rahe hai
+         
         currentFolder: state.filefolders.currentFolder,
         currentFolderData: state.filefolders.userFolders.find(
             (folder) => folder.docId === state.filefolders.currentFolder),

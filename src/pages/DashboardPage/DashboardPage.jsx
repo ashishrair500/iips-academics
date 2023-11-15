@@ -45,6 +45,9 @@ const DashboardPage = () => {
     if (  isLoading && userId) {
        dispatch(getFolders(userId));
        dispatch(getFiles(userId));
+
+ //jaise hi dashboard folder render hoga is .......is for getfolders
+
     }
   }, [isLoading,userId,dispatch]);
 
@@ -60,6 +63,9 @@ useEffect(() => {
     <>
      
     {
+
+ //subBar me jab bhi koi create folder button pr click karega to isCreateFolderModalOpen true ho jayega jaise hi true hoga createFolder component render hoga of createfolder ke submit button ko click karega to isCreateFolderModalOpen false ho jayega or createFolder close ho jayega
+
       isCreateFolderOpen && (
         <CreateFolder setIsCreateFolderOpen={setIsCreateFolderOpen} />
       )
@@ -89,9 +95,11 @@ showSubBar && (
       setIsFileUploadOpen={setIsFileUploadOpen}
 
       />
+      
+
 )
 }
-    
+    {/*nested routes*/}
       <Routes>
         <Route path="" element={<HomeComponent />} />
         <Route path="folder/:folderId" element={<FolderComponent />} />

@@ -18,6 +18,7 @@ const dispatch = useDispatch();
     {
       isAuthenticated ? (
 
+        //if isAuthenticate is true  then in dashboard and logout button else login or register
           <>
           <li className='nav-item mx-2'>
           

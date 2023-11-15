@@ -12,7 +12,7 @@ const HomeComponent = () => {
     (state) => ({
       isLoading: state.filefolders.isLoading,
       userFolders : state.filefolders.userFolders.filter(
-        (folder)=> folder.data.parent === "root"),
+        (folder)=> folder.data.parent === "root"),   //all the folders coming from redux
       userFiles : state.filefolders.userFiles.filter(
         (file)=> file.data.parent === "root"),
           currentFolder:state.filefolders.currentFolder,
