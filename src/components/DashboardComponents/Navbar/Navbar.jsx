@@ -12,7 +12,14 @@ const dispatch = useDispatch();
 
   return  <nav className='navbar navbar-expand-lg navbar-white bg-white shadow-sm p-3 '>
     <Link className='navbar-brand ms-5 ' to='/dashboard'>
-        Notes Adda 
+        Notes Adda  
+    </Link>
+
+    <Link className='navbar-brand ms-5 ' to='/aboutus'>
+        Aboutus 
+    </Link>
+    <Link className='navbar-brand ms-5 ' to='/contactus'>
+        Contactus 
     </Link>
     <ul className='navbar-nav ms-auto me-5'>
     {
@@ -20,6 +27,12 @@ const dispatch = useDispatch();
 
         //if isAuthenticate is true  then in dashboard and logout button else login or register
           <>
+       
+
+         
+
+
+
           <li className='nav-item mx-2'>
           
           <p className='my-0 mt-2 mx-2'>
