@@ -29,7 +29,7 @@ const NavigationComponent = () => {
                 <Link className='btn btn-primary btn-sm' to="/dashboard">dashboard</Link>
               </li>
               <li className='nav-item'>
-                <button className='btn btn-success btn-sm' onClick={()=>dispatch(signOutUser)}>Logout</button>
+                <button className='btn btn-success btn-sm' onClick={()=>dispatch(signOutUser())}>Logout</button>
               </li>
             </>
           )
