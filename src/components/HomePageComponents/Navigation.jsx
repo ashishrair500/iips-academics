@@ -12,7 +12,7 @@ const NavigationComponent = () => {
   return (
 
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark ' >
-      <Link className='navbar-brand ms-5' to="/">TopNote-Maro top ek Raat Me</Link>
+      <Link className='navbar-brand ms-5' to="/">iips notes portal</Link>
       <ul className='navbar-nav ms-auto me-5'>
 
         {
