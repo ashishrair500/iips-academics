@@ -108,7 +108,7 @@ showSubBar && (
      <h2>Footer</h2>
      <p>@copyright All right reserved</p>
      <p>iips website:iips.edu.in</p>
-     <p>dowload syllabus:https://iips.edu.in/syllabus.php</p>
+     <p>download syllabus:https://iips.edu.in/syllabus.php</p>
      <p> Davv acadmics:https://www.dauniv.ac.in/</p>
      <p> footer should float at the bottom</p>
 
