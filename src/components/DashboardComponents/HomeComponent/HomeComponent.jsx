@@ -45,7 +45,7 @@ const HomeComponent = () => {
          {
           currentFolder!=="root"?(
 <ShowItems 
-        title={"Uploaded Files"} 
+        title={"Notes"} 
         type={"file"} 
         items={
           userFiles.filter((file)=> file.data.data === null)
