@@ -12,7 +12,7 @@ const dispatch = useDispatch();
 
   return  <nav className='navbar navbar-expand-lg navbar-white bg-white shadow-sm p-3 '>
     <Link className='navbar-brand ms-5 ' to='/dashboard'>
-        IIps Note Portal 
+        iips.Academics 
     </Link>
 
     <Link className='navbar-brand ms-5 ' to='/aboutus'>
