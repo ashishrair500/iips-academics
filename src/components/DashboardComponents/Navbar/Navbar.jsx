@@ -39,7 +39,7 @@ const dispatch = useDispatch();
             <span className='text-dark' >Welcome: </span>
             <span  className='fw-bold'>{user.displayName.toUpperCase()}</span>
           </p>
-       </li>
+          </li>
           <li className='nav-item mx-2 '>
         <Link className='btn btn-primary  ' to='/'>
             Home

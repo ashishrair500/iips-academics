@@ -28,7 +28,7 @@ const FolderComponent = () => {
             childFolders.length > 0 && (
 
               <ShowItems
-                title={"Created Folders"}
+                title={" "}
                 type={"folder"}
                 items={childFolders}
 
@@ -38,7 +38,7 @@ const FolderComponent = () => {
           {
              createdFiles &&  createdFiles.length > 0 && (
               <ShowItems
-                title={"Created Files"}
+                title={"Notes"}
                 type={"file"}
                 items={createdFiles} />
             )}
@@ -46,7 +46,7 @@ const FolderComponent = () => {
             {
             uploadedFiles &&  uploadedFiles.length > 0 && (
               <ShowItems
-                title={"Uploaded Files"}
+                title={"Notes"}
                 type={"file"}
                 items={uploadedFiles} />
             )}

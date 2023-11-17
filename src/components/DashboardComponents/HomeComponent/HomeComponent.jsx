@@ -30,7 +30,7 @@ const HomeComponent = () => {
       :( 
         <>
         <ShowItems 
-        title={"Created Folders"} 
+        title={"Choose Subject"} 
         type={"folder"} 
         items={userFolders}
         />
