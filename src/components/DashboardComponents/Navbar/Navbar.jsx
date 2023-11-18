@@ -27,17 +27,11 @@ const dispatch = useDispatch();
 
         //if isAuthenticate is true  then in dashboard and logout button else login or register
           <>
-       
-
-         
-
-
-
           <li className='nav-item mx-2'>
           
           <p className='my-0 mt-2 mx-2'>
             <span className='text-dark' >Welcome: </span>
-            <span  className='fw-bold'>{user.displayName.toUpperCase()}</span>
+            <span  className='fw-bold'>{user.displayName?.toUpperCase()}</span>
           </p>
           </li>
           <li className='nav-item mx-2 '>

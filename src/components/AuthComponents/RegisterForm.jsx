@@ -41,7 +41,7 @@ React.useEffect(()=>{
             <div className="form-group my-2">
                 <input
                     type="text"
-                    name="email"
+                    name="name"
                     className="form-control"
                     placeholder="Name"
                     value={name}
