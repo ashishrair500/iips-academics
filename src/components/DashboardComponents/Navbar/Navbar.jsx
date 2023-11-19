@@ -41,7 +41,7 @@ const dispatch = useDispatch();
         <li className='nav-item'>
         <button className='btn btn-success ' 
         onClick={() => dispatch(signOutUser())} >
-           LogOut
+           Logout
         </button>
 
         </li>
