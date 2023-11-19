@@ -68,7 +68,7 @@ const Subbar = ({
                         : (
                             <>
                                 <li className="breadcrumb-item active" >
-                                    Root
+                                    courses
                                 </li>
                             </>
 
