@@ -30,7 +30,7 @@ const HomeComponent = () => {
       :( 
         <>
         <ShowItems 
-        title={"Choose Subject"} 
+        title={"Choose Course"} 
         type={"folder"} 
         items={userFolders}
         />
