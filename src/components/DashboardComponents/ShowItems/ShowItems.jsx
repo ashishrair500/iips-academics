@@ -34,7 +34,7 @@ console.log(items)  //items are the all folders
         <p
           key={index * 55}
           className='col-md-2 py-2 border p-2 text-center d-flex flex-column border'
-          onDoubleClick={() => handleDoubleClick(item.docId)}
+          onClick={() => handleDoubleClick(item.docId)}
         >
           {type === "folder" ? (
             <FontAwesomeIcon icon={faFolder} size='4x' className='mb-3' />
