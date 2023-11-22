@@ -9,7 +9,7 @@ const HomePage = () => {
     <> 
     <NavigationComponent/>
     <h1 className='display-1 my-5 text-center'>
-        Welcome to iips Notes Portal 
+        Welcome to IIPS Notes Portal 
     </h1>
     </>
   )
