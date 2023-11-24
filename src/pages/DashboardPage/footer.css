@@ -1,7 +1,7 @@
 /* footer.css */
 
 .footer {
-    background: linear-gradient(to right, #373b44, #4286f4);
+  background: linear-gradient(to right, #d9dadd, #dbdbdb);
     padding: 10px; /* Adjust the padding value */
     text-align: center;
     position: fixed;
@@ -21,14 +21,17 @@
   }
   
   .footer a {
-    color: white;
+    background: linear-gradient(to right, #000000, #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-decoration: none;
     font-size: 1em;
     font-weight: bolder;
   }
   
   .footer p {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-top: 5px; /* Adjust the margin value */
     font-size: 1em;
     font-weight: bolder;
