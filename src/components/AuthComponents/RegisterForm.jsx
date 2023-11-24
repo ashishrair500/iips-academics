@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { signUpUser } from '../../redux/actionCreators/authActionCreator';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
+import'./Register.css'
 const RegisterForm = () => {
 
     const [name, setName] = React.useState("")
@@ -83,7 +83,7 @@ React.useEffect(()=>{
 
 
 
-            <button type="submit" className='btn btn-primary my-2 form-control'>Register</button>
+            <button type="submit" className='glow-on-hover'>Register</button>
         </form>
     )
 }
