@@ -3,6 +3,7 @@ import { signInUser } from '../../redux/actionCreators/authActionCreator'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import {toast} from "react-toastify"
+import './LoginForm.css'
 const LoginForm = () => {
 const[email,setEmail] = React.useState("")
 const[password,setPassword] = React.useState("")
@@ -48,7 +49,7 @@ React.useEffect(()=>{
                  onChange={(e)=> setPassword(e.target.value)}
             />
         </div>
-      <button type="submit" className='btn btn-primary my-2 form-control'>Login</button>
+      <button type="submit" className='glow-on-hover'>Login</button>
     </form>
   )
 }

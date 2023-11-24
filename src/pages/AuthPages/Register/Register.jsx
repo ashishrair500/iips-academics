@@ -1,20 +1,21 @@
-import React from 'react'
-import {Link} from "react-router-dom"
-import RegisterForm from '../../../components/AuthComponents/RegisterForm'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import RegisterForm from '../../../components/AuthComponents/RegisterForm';
+import './Register.css'; // Import your styles
+
 const Register = () => {
   return (
-    <div  className='container-fluid'> 
-    <h1 className='display-1 my-5 text-center '> Register</h1>
+    <div className='register-container'>
+      <div className='register-content'>
+        <h1 className='register-heading'>Register</h1>
 
-    <div className='row'>
-    <div className='col-md-5 mx-auto mt-5'>
-      <RegisterForm/>
-      <Link to="/login">Already a  member ? Login</Link>
+        <div className='register-form'>
+          <RegisterForm />
+          <Link to="/login" className='register-login-link'>Already a member? Login</Link>
+        </div>
+      </div>
     </div>
+  );
+};
 
-    </div>
-    </div>
-  )
-}
-
-export default Register
+export default Register;

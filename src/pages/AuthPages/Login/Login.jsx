@@ -1,20 +1,21 @@
-import React from 'react'
-import LoginForm from '../../../components/AuthComponents/LoginForm'
-import {Link} from "react-router-dom"
-const Login = () => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+import LoginForm from '../../../components/AuthComponents/LoginForm';
+import './Login.css'; // Import your styles
+
+const LoginPage = () => {
   return (
-    <div  className='container-fluid'> 
-    <h1 className='display-1 my-5 text-center '> Login Here</h1>
+    <div className='login-container'>
+      <div className='login-content'>
+        <h1 className='login-heading'>Login Here</h1>
 
-    <div className='row'>
-    <div className='col-md-5 mx-auto mt-5'>
-      <LoginForm />
-      <Link to="/register">Not a member ? Register</Link>
+        <div className=''>
+          <LoginForm />
+          <Link to="/register" className='login-register-link'>Not a member? Register</Link>
+        </div>
+      </div>
     </div>
+  );
+};
 
-    </div>
-    </div>
-  )
-}
-
-export default Login
+export default LoginPage;

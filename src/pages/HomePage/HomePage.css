@@ -1,0 +1,92 @@
+/* HomePage.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+  background: linear-gradient(to right, #373b44, #4286f4);
+}
+
+.home-container {
+  background: linear-gradient(to right, #373b44, #4286f4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.home-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #3498db;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0 10px;
+}
+
+.home-heading {
+  background: linear-gradient(to right, #ffffff, #f39c12);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  margin-top: 20px;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  animation: scroll 15s linear infinite;
+}
+
+.carousel img {
+  width: auto;
+  max-width: 100%;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-heading {
+    font-size: 2.5em;
+  }
+
+  .carousel {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-heading {
+    font-size: 2em;
+  }
+
+  .carousel {
+    height: 100px;
+  }
+}
+
+/* Add more media queries as needed for smaller devices */
