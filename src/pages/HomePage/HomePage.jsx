@@ -4,6 +4,7 @@ import './HomePage.css'; // Import your styles
 
 const HomePage = () => {
   return (
+
     <div>
       <NavigationComponent />
       <div className='home-container'>
@@ -21,6 +22,11 @@ const HomePage = () => {
       </div>
     </div>
   );
+
+     
+   
+  
+
 }
 
 export default HomePage;
