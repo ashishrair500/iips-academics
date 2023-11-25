@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { signOutUser } from '../../../redux/actionCreators/authActionCreator';
+
 import './Navbar.css'; // Add this line
 
 const Navbar = () => {
@@ -24,25 +24,25 @@ const Navbar = () => {
             Contactus
           </Link>
         </div>
-
+</div>
         <ul className='navbar-nav'>
           {isAuthenticated ? (
             <>
+             
               <li className='nav-item'>
-                <p className='user-welcome'>
-                  Welcome: <span className='user-name'>{user.displayName?.toUpperCase()}</span>
-                </p>
-              </li>
-              <li className='nav-item'>
-                <Link className='logout-btn' to='/'>
+                <Link className='Home' to='/'>
                   Home
                 </Link>
+                <img src="../../../../public/home-icon.png"></img>
               </li>
               <li className='nav-item'>
-                <button className='logout-btn' onClick={() => dispatch(signOutUser())}>
-                  Logout
-                </button>
+                <p className='user-welcome'>
+                <span className='user-name'>{user.displayName?.toUpperCase()}</span>
+                  <img className='admin-icon' src="../../../../public/admin-icon.png"></img>
+                </p>
+               
               </li>
+             
             </>
           ) : (
             <>
@@ -59,7 +59,7 @@ const Navbar = () => {
             </>
           )}
         </ul>
-      </div>
+      
     </nav>
   );
 };

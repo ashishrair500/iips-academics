@@ -1,0 +1,48 @@
+/* ShowItems.css */
+
+.show-items {
+    width: 100%;
+  }
+  
+  h1 {
+    color: #ffc107;
+    font-size: 2em; /* Set the font size to make it larger */
+  }
+  
+  .items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .show-item {
+    flex-basis: calc(20% - 20px); /* 20% to fit 5 items horizontally */
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .show-item:hover {
+    transform: scale(1.1); /* Grow on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Glow on hover */
+  }
+  
+  .show-item img {
+    width: 120px; /* Increase the icon size */
+    height: 120px;
+  }
+  
+   
+  
+  .show-item span {
+    display: block;
+    font-weight: bold;
+    color: #ffc107; /* Set the text color */
+    margin-top: 10px; /* Add margin for better spacing */
+    font-size: 1em; /* Set the font size for folder names */
+    
+  
+  }
+  

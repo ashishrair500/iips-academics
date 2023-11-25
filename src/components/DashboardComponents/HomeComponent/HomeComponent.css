@@ -1,0 +1,18 @@
+/* HomeComponent.css */
+
+/* Add your custom styles here */
+
+/* Example styles: Modify or add your own styles based on your design */
+.display-1 {
+    color: #ffc107; /* Icon color */
+    font-size: 2rem; /* Icon size */
+    transition: font-size 0.3s ease, color 0.3s ease; /* Transition on hover */
+  }
+  
+  .display-1:hover {
+    font-size: 2.5rem; /* Increased size on hover */
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.7); /* Glow effect on hover */
+  }
+  
+  /* Add more styles as needed for your specific design */
+  

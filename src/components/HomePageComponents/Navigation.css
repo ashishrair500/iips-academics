@@ -119,7 +119,9 @@
   top: 0;
   border-radius: 10px;
 }
-
+.update{
+  margin-right: auto;
+}
 .login-btn:hover,
 .register-btn:hover,
 .logout-btn:hover {

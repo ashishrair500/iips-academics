@@ -3,12 +3,12 @@
 
 .navbar {
   background: linear-gradient(to right, #373b44, #4286f4);
-    padding: 10px 20px; /* Reduced padding */
+    padding: 10px 20px;  
   }
   
   .navbar-container {
     max-width: 1200px;
-    margin: 0 auto;
+ margin-left: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,24 +36,35 @@
     list-style: none;
     display: flex;
     align-items: center;
-    margin: 0;
+    padding-left: 452px !important;
+    
   }
   
   .nav-item {
-    margin: 0 10px;
+    /* margin: 0 10px; */
     display: inline-block;
   }
   
   .user-welcome {
     color: white;
-    margin: 0;
-    padding-left: 209px;
+    
+     
   }
   
   .user-name {
     color: #ffc107;
+    
   }
-  
+ li img{
+  height: 25px;
+  width: auto;
+ }
+ .admin-icon{
+   padding-left: 5px;
+   padding-bottom: 10px;
+  height: 40px;
+  width: auto;
+ }
   .login-btn,
   .register-btn,
   .logout-btn {

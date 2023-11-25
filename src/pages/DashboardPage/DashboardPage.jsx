@@ -54,7 +54,7 @@ const DashboardPage = () => {
   }, [pathname]);
 
   return (
-    <>
+    < >
       {isCreateFolderOpen && <CreateFolder setIsCreateFolderOpen={setIsCreateFolderOpen} />}
       {isFileUploadOpen && <UploadFile setIsFileUploadOpen={setIsFileUploadOpen} />}
       {isCreateFileOpen && <CreateFile setIsCreateFileOpen={setIsCreateFileOpen} />}

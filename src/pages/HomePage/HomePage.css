@@ -20,7 +20,10 @@ body, html {
   text-align: center;
   padding: 20px;
 }
-
+.home-content>img {
+  height: 200px;
+  width: auto;
+}
 .navbar {
   background-color: #3498db;
   padding: 15px;
@@ -49,14 +52,14 @@ body, html {
   overflow: hidden;
   width: 100%;
   height: 200px;
-  animation: scroll 15s linear infinite;
+  /* animation: scroll 25s linear infinite; */
 }
 
 .carousel img {
   width: auto;
   max-width: 100%;
   margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 @keyframes scroll {

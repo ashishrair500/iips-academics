@@ -1,0 +1,61 @@
+/* CreateFolder.css */
+
+.create-folder-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+  }
+  
+  .create-folder-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 5%;
+  }
+  
+  .create-folder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .create-folder-title {
+    font-size: 1.5em;
+  }
+  
+  .create-folder-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .create-folder-form {
+    margin-top: 20px;
+  }
+  
+  .create-folder-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .create-folder-submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-folder-submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
