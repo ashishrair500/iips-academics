@@ -1,136 +1,88 @@
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, shallowEqual } from 'react-redux';
 import Header from './Header';
 import CodeEditor from './CodeEditor';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import './FileComponent.css'
+import './FileComponent.css';
+
 const FileComponent = () => {
-    const { fileId } = useParams();
-    const [fileData, setFileData] = useState("");
-    const [prevFileData, setPrevFileData] = useState("");
-    const navigate = useNavigate();
-    const { currentFile, isAuthenticated } = useSelector(
-        (state) => ({
-            currentFile: state.filefolders.userFiles.find((file) => file.docId === fileId),
-            isAuthenticated: state.auth.isAuthenticated,
-        }),
-        shallowEqual
-    );
-    useEffect(() => {
-        if (!isAuthenticated) {
-            navigate('/');
-        }
-    }, []);
+  const { fileId } = useParams();
+  const [fileData, setFileData] = useState('');
+  const navigate = useNavigate();
 
+  const { currentFile, isAuthenticated } = useSelector(
+    (state) => ({
+      currentFile: state.filefolders.userFiles.find((file) => file.docId === fileId),
+      isAuthenticated: state.auth.isAuthenticated,
+    }),
+    shallowEqual
+  );
 
-
-    useEffect(() => {
-        if (currentFile) {
-            setFileData(currentFile.data.data);
-        }
-    }, [currentFile, currentFile?.data.data]);
-
-
-    const downloadFile = () => {
-
-        const element = document.createElement("a");
-        element.setAttribute("href", currentFile?.data.url);
-        element.setAttribute("download", currentFile?.data.name);
-        element.setAttribute("target", "_blank");
-        element.style.display = "none";
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/');
     }
-    if (isAuthenticated)
-        return (
-            <div>
-                {
-                    isAuthenticated && fileData !== null ? (
-                        <>
-                            <Header
-                                fileName={currentFile?.data.name}
-                                fileData={fileData}
-                                prevFileData={prevFileData}
-                                fileId={fileId}
-                            />
-                            <CodeEditor fileName={currentFile?.data.name} data={fileData} setData={setFileData} />
-                        </>
-                    ) :
-                        (
+  }, [isAuthenticated, navigate]);
 
-                            <div className='position-fixed left-0 top-0 w-100 h-100 bg-black text-white '>
-                                {/* Sub Menu Bar */}
-                                <div className='d-flex py-4 mt-4 px-5 justify-content-between align-items-center '>
-                                    <p
-                                        title={currentFile?.data.name}
-                                        className="my-0"   >
-                                        {currentFile?.data.name.length > 40 ?
-                                            currentFile?.data.name.slice(0, 40) + "... ." +
-                                            currentFile?.data.extention :
-                                            currentFile?.data.name
-                                        }
-                                    </p>
-                                    <div className='d-flex align-items-center me-5'>
-                                        <button className='btn btn-sm btn-outline-light me-3'
-                                            onClick={() => navigate(-1)}> Go Back</button>
+  useEffect(() => {
+    if (currentFile) {
+      setFileData(currentFile.data.data);
+    }
+  }, [currentFile, currentFile?.data.data]);
 
+  const downloadFile = () => {
+    const link = document.createElement('a');
+    link.href = currentFile?.data.url;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
-                                    </div>
+  useEffect(() => {
+    // Trigger the downloadFile function when the component mounts
+    downloadFile();
+  }, []); // Empty dependency array ensures it runs only once when the component mounts
 
-
-
-                                </div>
-                                <div className='w-100 mt-4' style={{ height: '650px', width: 'auto' }}>
-
-                                    {
-                                        currentFile?.data.extension.includes('jpg') ||
-                                            currentFile?.data.extension.includes('png') ||
-                                            currentFile?.data.extension.includes('jpeg') 
-                                             ?
-                                            (
-
-                                                <img
-                                                    src={currentFile?.data.url}
-                                                    alt={currentFile?.data.name}
-                                                    className='w-100 h-100 object-fit-contain '
-
-                                                />
-                                            ) :
-                                            (
-                                                <div>
-
-                                                    <h1 className='home-heading'>
-
-                                                        Please click to download and to preview in browser view
-
-                                                    </h1>
-                                                    <button className='glow-on-hover'
-                                                        onClick={() => downloadFile()}
-                                                    >Download</button>
-                                                </div>
-                                            )
-
-                                    }
-                                </div>
-                            </div>
-
-
-                        )
-                }
-
-
-            </div>
-        )
-
+  if (isAuthenticated) {
     return (
-        <div>
-            <h1>Login First</h1>
-        </div>
-    )
-}
+      <div>
+        {isAuthenticated && fileData !== null ? (
+          <>
+            <Header fileName={currentFile?.data.name} fileId={fileId} />
+            <CodeEditor fileName={currentFile?.data.name} data={fileData} setData={setFileData} />
+          </>
+        ) : (
+          <div >
+            {/* Sub Menu Bar */}
+            <div className=' '>
+              <p
+                title={currentFile?.data.name}
+                className='my-0'
+                style={{ cursor: 'pointer' }}
+              >
+                {currentFile?.data.name.length > 40
+                  ? currentFile?.data.name.slice(0, 40) + '... .' + currentFile?.data.extention
+                  : currentFile?.data.name}
+              </p>
+              <div className='center-div'>
+                <button className='glow-on-hover' onClick={() => navigate(-1)}>
+                  Go Back
+                </button>
+                {/* The download button is automatically triggered by the useEffect hook */}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
 
-export default FileComponent
+  return (
+    <div>
+      <h1>Login First</h1>
+    </div>
+  );
+};
 
-
+export default FileComponent;

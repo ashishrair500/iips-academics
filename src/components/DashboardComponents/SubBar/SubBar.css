@@ -1,7 +1,7 @@
 /* SubBar.css */
 
 .navbar {
-  background-color: #fff;
+  background-color: #d44040;
 }
 
 .breadcrumb {
@@ -54,20 +54,3 @@ border-color: #0056b3;
 }
 
 /* Additional style for contribute button */
-.contribute-button {
-  background-color: transparent;
-  border: none;
-  color: #fff; /* Text color set to white */
-  font-size: 40px; /* Increased text size */
-  font-weight: bold; /* Set font weight to bold */
-  margin-right: 5px;
-  text-decoration: none; /* Remove underline */
-  transition: all 0.3s ease-in-out;
-  white-space: nowrap;
-}
-
-.contribute-button:hover {
-  color: #ffc107;
-  transform: scale(2.0);
-  box-shadow: 0 0 20px rgba(255, 193, 7, 0.7);
-}

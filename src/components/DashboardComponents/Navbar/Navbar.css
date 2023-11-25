@@ -1,5 +1,4 @@
-/* Navbar.css */
-
+ 
 
 .navbar {
   background: linear-gradient(to right, #373b44, #4286f4);
@@ -41,7 +40,7 @@
   }
   
   .nav-item {
-    /* margin: 0 10px; */
+ 
     display: inline-block;
   }
   
