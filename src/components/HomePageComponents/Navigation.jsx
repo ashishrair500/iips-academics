@@ -18,7 +18,7 @@ const NavigationComponent = () => {
           <>
             <li className='nav-item'>
               <p className='user-welcome'>
-                Welcome: <span className='user-name'>{user.displayName.toUpperCase()}</span>
+               <span className='user-name'>{user.displayName.toUpperCase()}</span>
               </p>
             </li>
             <li className='nav-item'>
@@ -35,7 +35,7 @@ const NavigationComponent = () => {
         ) : (
           <>
             <li className='nav-item'>
-              <Link className='login-btn' to='/login'>
+              <Link className='login-btn update' to='/login'>
                 Login
               </Link>
             </li>

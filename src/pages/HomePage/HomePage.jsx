@@ -9,13 +9,21 @@ const HomePage = () => {
 
     <div>
       <NavigationComponent />
+      <br></br>
       <div className='home-container'>
         <div className='home-content'>
-          <h1 className='home-heading'>
+        <img src="../../../public/iips-logo.png" alt="IIPS"  />
+          {/* <h1 className='home-heading'>
             Welcome to IIPS Notes Portal
-          </h1>
+          </h1> */}
           <div className='carousel'>
             {/* Add your carousel images here */}
+            <img src="../../../public/1_iips.jpg" alt="IIPS" />
+            <img src="../../../public/2_iips.jpg" alt="IIPS" />
+            <img src="../../../public/3_iips.jpg" alt="IIPS" />
+            <img src="../../../public/1_iips.jpg" alt="IIPS" />
+            <img src="../../../public/2_iips.jpg" alt="IIPS" />
+            <img src="../../../public/3_iips.jpg" alt="IIPS" />
             <img src="../../../public/1_iips.jpg" alt="IIPS" />
             <img src="../../../public/2_iips.jpg" alt="IIPS" />
             <img src="../../../public/3_iips.jpg" alt="IIPS" />
