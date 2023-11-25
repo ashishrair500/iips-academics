@@ -6,10 +6,12 @@ const HomePage = () => {
   return (
 <>
 
-
+ 
     <div>
       <NavigationComponent />
-      <br></br>
+      
+      <div className='line-break'></div>
+      
       <div className='home-container'>
         <div className='home-content'>
         <img src="../../../public/iips-logo.png" alt="IIPS"  />
@@ -45,7 +47,6 @@ const HomePage = () => {
         </ul>
         <p >@copyright All right reserved</p>
       </footer>
-
 
     </>
   );

@@ -1,4 +1,26 @@
-.main-content {
-    padding-bottom: 60px; /* Adjust the value based on the height of your footer */
+.line-break{
+    
+     
+    border-top: 1px solid rgb(176, 175, 175);
+    
+    
+}
+
+.contribute-button {
+    background-color: transparent;
+    border: none;
+    color: rgb(251, 73, 73); /* Text color set to white */
+    font-size: 20px; /* Increased text size */
+     
+   display: flex;
+    justify-content: center;
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
   }
   
+  .contribute-button:hover {
+    color: rgb(251, 73, 73);
+    transform: scale(1.5);
+    box-shadow: 0 0 20px rgb(251, 73, 73);
+  }

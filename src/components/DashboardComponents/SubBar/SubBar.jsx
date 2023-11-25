@@ -28,7 +28,6 @@ const Subbar = ({
   };
 
   return (
-    <div>
     <nav className="navbar">
       <nav className="ms-5" aria-label="breadcrumb">
         <ol className="breadcrumb  d-flex align-items-center">
@@ -87,17 +86,16 @@ const Subbar = ({
       ) : (
         <ul className="navbar-nav ms-auto">
           <li className="nav-item mx-2">
-            
+         
+              
+             
+              
+          
           </li>
         </ul>
       )}
     </nav>
-    <marquee behavior="scroll" direction="right" scrollamount="5">
-              
-              <a href="https://forms.gle/v6PXeXPVk3W57sgt5" target="_blank" className='contribute-button'>Want to Contribute</a> 
-              
-            </marquee>
-    </div>
+   
   );
 };
 
