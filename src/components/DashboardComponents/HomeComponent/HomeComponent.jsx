@@ -21,11 +21,7 @@ const HomeComponent = () => {
 
   return (
     <div className="col-md-12 w-100">
-<<<<<<< Updated upstream
-      {isLoading ? (
-        <h1 className="display-1 my-5 text-center">Loading...</h1>
-      ) : (
-=======
+ 
     {
       isLoading ? (
         <h1 className="display-1 my-5 text-center text-info">Loading...</h1>
@@ -33,7 +29,7 @@ const HomeComponent = () => {
          )
       
       :( 
->>>>>>> Stashed changes
+
         <>
           <ShowItems
             title={"Choose Course"}
