@@ -14,7 +14,7 @@ import FileComponent from '../../components/DashboardComponents/FileComponent/Fi
 import UploadFile from '../../components/DashboardComponents/UploadFile/UploadFile';
 import './DashboardPage.css';
 import './footer.css';
-
+import FooterComponent from '../../components/FooterComponent/Footer';
 const DashboardPage = () => {
   const [isCreateFolderOpen, setIsCreateFolderOpen] = useState(false);
   const [isCreateFileOpen, setIsCreateFileOpen] = useState(false);
@@ -64,7 +64,7 @@ const DashboardPage = () => {
       <div className='line-break'></div>
       <a href="https://forms.gle/v6PXeXPVk3W57sgt5" target="_blank" className='contribute-button'>
       अपने Study Material को साझा करने के लिए click करें !</a>
-
+      
 
 
       {showSubBar && (
@@ -81,22 +81,8 @@ const DashboardPage = () => {
         <Route path="file/:fileId" element={<FileComponent />} />
       </Routes>
 
-      <footer className='footer'>
-        <ul>
-          <li>
-            <a href="https://iips.edu.in/"> IIPS Website </a>
-          </li>
-          <li>
-            <a href="https://iips.edu.in/"> Download Syllabus </a>
-          </li>
-          <li>
-            <a href="https://iips.edu.in/">DAVV Website </a>
-          </li>
-          
-        </ul>
-        <p>@copyright All right reserved</p>
-      </footer>
-     
+      <FooterComponent />
+
      
     </div>
   );

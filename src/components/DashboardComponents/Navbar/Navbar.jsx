@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import './Navbar.css'; // Add this line
-
 const Navbar = () => {
   const { isAuthenticated, user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -12,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-container'>
-        <Link className='navbar-brand' to='/dashboard'>
+        <Link className='navbar-brand' to='/'>
           iips.Academics
         </Link>
 

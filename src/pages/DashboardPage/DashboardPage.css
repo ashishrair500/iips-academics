@@ -1,13 +1,12 @@
 .line-break{
-    
-     
+  
     border-top: 1px solid rgb(176, 175, 175);
     
     
 }
 
 .contribute-button {
-    background-color: transparent;
+  background: linear-gradient(to right, #373b44, #2f3031);
     border: none;
     color: rgb(251, 73, 73); /* Text color set to white */
     font-size: 20px; /* Increased text size */
@@ -17,6 +16,8 @@
     text-decoration: none; /* Remove underline */
     transition: all 0.3s ease-in-out;
     white-space: nowrap;
+    text-decoration:underline
+
   }
   
   .contribute-button:hover {

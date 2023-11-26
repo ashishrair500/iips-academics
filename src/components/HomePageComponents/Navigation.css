@@ -1,10 +1,11 @@
 /* Navigation.css */
 
 .navbar {
-  background: linear-gradient(to right, #373b44, #4286f4);
-  padding: 20px;
+  background: linear-gradient(to right, #373b44, #4286f4); 
+}
+
+.navbar-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -13,6 +14,7 @@
   font-size: 1.5em;
   font-weight: bolder;
   color: #fffb00;
+  margin-right: 20px;
 }
 
 .navbar-nav {
@@ -24,26 +26,24 @@
 }
 
 .nav-item {
-  margin: 0 10px;
   display: inline-block !important; /* Ensure horizontal display */
 }
 
 .user-welcome {
-  color: white;
   margin: 0;
   font-size: 1.2em;
   font-weight: bolder;
 }
 
 .user-name {
-  color: #ffc107;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bolder;
 }
 
 .login-btn,
 .register-btn,
-.logout-btn {
+.logout-btn,
+.dashboard-btn {
   color: white;
   text-decoration: none;
   padding: 9px 21px;
@@ -51,7 +51,7 @@
   cursor: pointer;
   border-radius: 15px;
   transition: all 0.3s; /* Apply transition to all properties */
-  font-size: 1.5em;
+  font-size: 1.7em; /* Increase font size */
   display: inline-block;
   position: relative;
   z-index: 0;
@@ -59,7 +59,8 @@
 
 .login-btn:before,
 .register-btn:before,
-.logout-btn:before {
+.logout-btn:before,
+.dashboard-btn:before {
   content: '';
   background: linear-gradient(
     45deg,
@@ -89,25 +90,29 @@
 
 .login-btn:active,
 .register-btn:active,
-.logout-btn:active {
+.logout-btn:active,
+.dashboard-btn:active {
   color: #000;
 }
 
 .login-btn:active:before,
 .register-btn:active:before,
-.logout-btn:active:before {
+.logout-btn:active:before,
+.dashboard-btn:active:before {
   background: transparent;
 }
 
 .login-btn:hover:before,
 .register-btn:hover:before,
-.logout-btn:hover:before {
+.logout-btn:hover:before,
+.dashboard-btn:hover:before {
   opacity: 1;
 }
 
 .login-btn:after,
 .register-btn:after,
-.logout-btn:after {
+.logout-btn:after,
+.dashboard-btn:after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -119,13 +124,10 @@
   border-radius: 10px;
 }
 
-.login-btn{
-  margin-right: 0px;
-}
-
 .login-btn:hover,
 .register-btn:hover,
-.logout-btn:hover {
+.logout-btn:hover,
+.dashboard-btn:hover {
   transform: scale(1.1); /* Increase size on hover */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
 }
@@ -144,13 +146,12 @@
   .user-name,
   .login-btn,
   .register-btn,
-  .logout-btn {
+  .logout-btn,
+  .dashboard-btn {
     font-size: 1em;
     padding: 8px 12px;
   }
 }
-
-
 
 @media (max-width: 576px) {
   .navbar {
@@ -165,7 +166,8 @@
   .user-name,
   .login-btn,
   .register-btn,
-  .logout-btn {
+  .logout-btn,
+  .dashboard-btn {
     font-size: 0.8em;
     padding: 6px 10px;
   }

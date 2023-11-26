@@ -2,7 +2,7 @@
  
  
 .footer {
-  background: linear-gradient(to right, #d9dadd, #dbdbdb);
+  background-color: rgb(236, 228, 228);
     padding: 10px; /* Adjust the padding value */
     text-align: center;
   position: relative;
