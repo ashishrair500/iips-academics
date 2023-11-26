@@ -1,7 +1,7 @@
  
 
 .navbar {
-  background: linear-gradient(to right, #373b44, #4286f4);
+  background: linear-gradient(to right, #373b44, #2f3031);
     padding: 10px 20px;  
   }
   
@@ -46,7 +46,7 @@
   
   .user-welcome {
     color: white;
-    
+    padding: 10px;
      
   }
   

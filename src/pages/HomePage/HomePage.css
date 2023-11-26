@@ -5,7 +5,7 @@ body, html {
   padding: 0;
   height: 100%;
   font-size: 16px;
-  background: linear-gradient(to right, #373b44, #4286f4);
+  background: linear-gradient(to right, #373b44, #2f3031);
 }
 .line-break{
   margin-top: 10px;
@@ -16,7 +16,7 @@ body, html {
   width: 100%;
 }
 .home-container {
-  background: linear-gradient(to right, #373b44, #4286f4);
+  background: linear-gradient(to right, #373b44, #2f3031);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,72 @@ body, html {
   font-size: 3em;
   margin-bottom: 20px;
 }
+/* HomePage.css (Only the relevant part) */
 
+.content-below-line {
+  display: flex;
+  /* justify-content: ; */
+  align-items: center;
+  padding: 20px;
+  width: 1200px;
+}
+
+.text-container {
+  margin-right:50px ;
+   width: 100px;
+  flex: 1;
+  /* padding: 50px;   */
+  padding-right: 90px;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.logo-image {
+  
+  height: 375px;
+  width: auto; /* Adjust the width as needed */
+  margin-bottom: 40px;
+  border: 10px solid rgb(209, 116, 255);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(220, 219, 220, 0.3); /* Greyish shadow */
+  transition: transform 0.3s ease-in-out;
+}
+.logo-image:before, .logo-image:after {
+  position:absolute;
+  z-index:-2;
+  content:"";
+}
+.logo-image:before {
+  top:2%;
+  bottom:2%;
+  left:2%;
+  right:2%;
+  -webkit-border-radius:15%;		
+  -moz-border-radius:15%;
+  border-radius:15%;
+  -webkit-box-shadow:0px -1px 25px rgb(255, 255, 255), 0px 1px 25px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px -1px 25px rgba(255, 255, 255, 0.5), 0px 1px 25px rgba(0,0,0,0.7);
+  box-shadow:0px -1px 25px rgba(0, 0, 0, 0.5), 0px 1px 25px rgba(0,0,0,0.7);
+}
+.logo-image:hover {
+  transform: scale(1.1); /* Grow on hover */
+}
+.home-para{
+  /* background: linear-gradient(to right, #ffffff, #f39c12); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+  font-family: "Brush Script MT", cursive;
+ 
+   font-weight:  normal;
+    
+   padding-left: 100px;
+   padding-right: 100px;
+}
 .carousel {
   margin-top: 20px;
   display: flex;

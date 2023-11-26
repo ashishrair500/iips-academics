@@ -10,22 +10,32 @@ const NavigationComponent = () => {
 
   return (
     <nav className='navbar'>
-      <Link className='navbar-brand' to='/'>
-     iips.Acedemics
-      </Link>
+      <div className='navbar-container'>
+        <Link className='navbar-brand' to='/dashboard'>
+          iips.Academics
+        </Link>
+
+        <Link className='navbar-brand' to='/aboutus'>
+          Aboutus
+        </Link>
+        <Link className='navbar-brand' to='/contactus'>
+          Contactus
+        </Link>
+      </div>
+
       <ul className='navbar-nav'>
         {isAuthenticated ? (
           <>
             <li className='nav-item'>
               <p className='user-welcome'>
-               <span className='user-name'>{user.displayName.toUpperCase()}</span>
+                <span className='user-name'>{user.displayName.toUpperCase()}</span>
               </p>
             </li>
-            <li className='nav-item'>
-              <Link className='login-btn' to='/dashboard'>
+            {/* <li className='nav-item'>
+              <Link className='dashboard-btn' to='/dashboard'>
                 Dashboard
               </Link>
-            </li>
+            </li> */}
             <li className='nav-item'>
               <button className='logout-btn' onClick={() => dispatch(signOutUser())}>
                 Logout
