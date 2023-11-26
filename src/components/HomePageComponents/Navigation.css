@@ -1,7 +1,7 @@
 /* Navigation.css */
 
 .navbar {
-  background: linear-gradient(to right, #2ecc71, #3498db);
+  background: linear-gradient(to right, #373b44, #4286f4);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -46,8 +46,7 @@
 .logout-btn {
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  margin: 0 15px;
+  padding: 9px 21px;
   border: none;
   cursor: pointer;
   border-radius: 15px;
@@ -119,9 +118,11 @@
   top: 0;
   border-radius: 10px;
 }
-.update{
-  margin-right: auto;
+
+.login-btn{
+  margin-right: 0px;
 }
+
 .login-btn:hover,
 .register-btn:hover,
 .logout-btn:hover {
@@ -149,6 +150,8 @@
   }
 }
 
+
+
 @media (max-width: 576px) {
   .navbar {
     padding: 10px;
@@ -167,5 +170,3 @@
     padding: 6px 10px;
   }
 }
-
-/* Add more media queries as needed for smaller devices */

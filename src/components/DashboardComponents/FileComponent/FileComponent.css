@@ -1,20 +1,21 @@
-.home-heading {
-    background: linear-gradient(to right, #ffffff, #f39c12);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 4em;
-    margin-bottom: 20px;
+
+.center-div{
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
     text-align: center;
-  }
-  
+    
+    border-radius: 10px;
+     
+}
 .glow-on-hover {
-    margin-left: 490px;
-    width: 316px;
-    height: 116px;
+    
+  
+    height: 50px;
+    width: 200px;
     color: #ff0000;
     border-radius: 10px;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bolder;
   }
   
@@ -60,9 +61,4 @@
     border-radius: 10px;
   }
   
-  @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-  }
-  
+ 

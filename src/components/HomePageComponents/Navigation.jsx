@@ -11,7 +11,7 @@ const NavigationComponent = () => {
   return (
     <nav className='navbar'>
       <Link className='navbar-brand' to='/'>
-        IIPS Notes Portal
+     iips.Acedemics
       </Link>
       <ul className='navbar-nav'>
         {isAuthenticated ? (
@@ -35,7 +35,7 @@ const NavigationComponent = () => {
         ) : (
           <>
             <li className='nav-item'>
-              <Link className='login-btn update' to='/login'>
+              <Link className='login-btn' to='/login'>
                 Login
               </Link>
             </li>

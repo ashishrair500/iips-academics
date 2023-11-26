@@ -54,12 +54,18 @@ const DashboardPage = () => {
   }, [pathname]);
 
   return (
-    < >
-      {isCreateFolderOpen && <CreateFolder setIsCreateFolderOpen={setIsCreateFolderOpen} />}
+    <div className='body-container'>
+    {isCreateFolderOpen && <CreateFolder setIsCreateFolderOpen={setIsCreateFolderOpen} />}
       {isFileUploadOpen && <UploadFile setIsFileUploadOpen={setIsFileUploadOpen} />}
       {isCreateFileOpen && <CreateFile setIsCreateFileOpen={setIsCreateFileOpen} />}
 
+     
       <Navbar />
+      <div className='line-break'></div>
+      <a href="https://forms.gle/v6PXeXPVk3W57sgt5" target="_blank" className='contribute-button'>
+      अपने Study Material को साझा करने के लिए click करें !</a>
+
+
 
       {showSubBar && (
         <SubBar
@@ -86,10 +92,13 @@ const DashboardPage = () => {
           <li>
             <a href="https://iips.edu.in/">DAVV Website </a>
           </li>
+          
         </ul>
         <p>@copyright All right reserved</p>
       </footer>
-    </>
+     
+     
+    </div>
   );
 };
 
