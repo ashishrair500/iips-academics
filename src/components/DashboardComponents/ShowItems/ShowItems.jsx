@@ -30,7 +30,10 @@ const ShowItems = ({ title, items, type }) => {
             onClick={() => handleDoubleClick(item.docId)}
           >
            
+ 
             <img src={type === 'file' ? "../../../../public/assets/file-icon.png" : "../../../../public/assets/folder-icon.png"} alt={type === 'file' ? "File Icon" : "Folder Icon"} />
+ 
+ 
             <span>{item.data?.name}</span>
           </div>
         ))}
