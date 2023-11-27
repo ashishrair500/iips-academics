@@ -31,7 +31,6 @@ const HomePage = () => {
       This is a dummy paragraph. You can replace it with your actual content.
       This is a dummy paragraph. You can replace it with your actual content.
       This is a dummy paragraph. You can replace it with your actual content.
-     
     </p>
   </div>
   <div className='image-container'>
