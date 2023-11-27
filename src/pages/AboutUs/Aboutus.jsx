@@ -10,7 +10,7 @@ const AboutUs = () => {
 
       <div className="team-members">
         <div className="team-member">
-          <img src="../../public/my-img.jpg" alt="Sanyam Jain" />
+          <img src="../../public/static/my-img.jpg" alt="Sanyam Jain" />
           <h3>Sanyam Jain</h3>
           <div className="social-links">
             {/* Add your social media links */}
@@ -26,7 +26,7 @@ const AboutUs = () => {
         </div>
 
         <div className="team-member">
-          <img src="../../public/ashish-img.jpg" alt="Ashish Rai" />
+          <img src="../../public/static/ashish-img.jpg" alt="Ashish Rai" />
           <h3>Ashish Rai</h3>
           <div className="social-links">
             {/* Add your friend's social media links */}
