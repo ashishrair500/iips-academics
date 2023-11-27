@@ -32,12 +32,12 @@ const Navbar = () => {
                 <Link className='Home navbar-brand' to='/'>
                   Home
                 </Link>
-                <img src="../../../../public/static/media/home-icon.png"></img>
+                <img src="../../../../public/assets/home-icon.png"></img>
               </li>
               <li className='nav-item'>
                 <p className='user-welcome'>
                 <span className='user-name'>{user.displayName?.toUpperCase()}</span>
-                  <img className='admin-icon' src="../../../../public/static/media/admin-icon.png"></img>
+                  <img className='admin-icon' src="../../../../public/assets/admin-icon.png"></img>
                 </p>
                
               </li>
