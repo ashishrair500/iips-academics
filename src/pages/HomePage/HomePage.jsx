@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavigationComponent } from '../../components/HomePageComponents';
 import './HomePage.css'; // Import your styles
-import '../DashboardPage/footer.css'
+import '../DashboardPage/footer.css';
+
 import FooterComponent from '../../components/FooterComponent/Footer';
 import { Link } from 'react-router-dom';
 
@@ -39,7 +40,9 @@ const HomePage = () => {
               </div>
               <div className='image-container'>
                 <img
-                  src="../../../public/static/iips-logo.png"
+ 
+                  src="../../../public/assets/iips-logo.png"
+ 
                   alt="IIPS Logo"
                   className='logo-image'
                 />
@@ -51,17 +54,21 @@ const HomePage = () => {
             </Link>
             <div className='carousel'>
               {/* Add your carousel images here */}
-              <img src="../../../public/static/1_iips.jpg" alt="IIPS" />
-              <img src="../../../public/static/5_iips_meme.jpg" alt="IIPS" />
-              <img src="../../../public/static/6_iips-hostel.jpg" alt="IIPS" />
-              <img src="../../../public/static/2_iips.jpg" alt="IIPS" />
+ 
+              <img src="../../../public/assets/1_iips.jpg" alt="IIPS" />
+              <img src="../../../public/assets/5_iips_meme.jpg" alt="IIPS" />
+              <img src="../../../public/assets/6_iips-hostel.jpg" alt="IIPS" />
+              <img src="../../../public/assets/2_iips.jpg" alt="IIPS" />
+ 
             </div>
           </div>
         </div>
       </div>
       <a href="https://www.linkedin.com/school/iips-davv/" target="_blank" className='iips-linkedin'
       >@International Institue of Professional Studies
-        <img src="../../../public/static/linkedin-logo.jpg" ></img>
+ 
+        <img src="../../../public/assets/linkedin-logo.jpg" ></img>
+ 
       </a>
 
       <FooterComponent />
