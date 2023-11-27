@@ -1,6 +1,7 @@
 import React from 'react';
-import './AboutUs.css'; // Import your CSS file
+
 import { NavigationComponent } from '../../components/HomePageComponents';
+import './AboutUs.css';
 const AboutUs = () => {
   return (
     <>
