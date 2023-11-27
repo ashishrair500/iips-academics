@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { NavigationComponent } from '../../components/HomePageComponents';
-import './AboutUs.css';
+import './Aboutus.css';
 const AboutUs = () => {
   return (
     <>
