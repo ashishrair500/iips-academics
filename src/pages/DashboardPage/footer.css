@@ -5,7 +5,7 @@
   background-color: rgb(236, 228, 228);
     padding: 10px; /* Adjust the padding value */
     text-align: center;
-  position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 
