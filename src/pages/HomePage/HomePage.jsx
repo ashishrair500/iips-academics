@@ -20,8 +20,9 @@ const HomePage = () => {
             <div className='content-below-line'>
               <div className='text-container'>
 
+
                 <p className='home-para'>
-                  <h1>Our Motto.... &emsp; &emsp;</h1>
+                  <h1>Our Moto.... &emsp; &emsp;</h1>
                   We devoted to make this a platform where
                    respective faculties can upload their study material
                     ,suggested online links, referenced 
@@ -30,6 +31,9 @@ const HomePage = () => {
                     academics  materials. 
                     we welcomes faculties and students for 
                     suggestions and improvements.
+
+         
+  
 
                 </p>
               </div>
