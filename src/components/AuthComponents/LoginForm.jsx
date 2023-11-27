@@ -12,7 +12,6 @@ const navigate = useNavigate()
 const dispatch = useDispatch()
 
 
-
 const handleSubmit= (e) =>{
   e.preventDefault();
   if(!email || !password){
@@ -33,7 +32,7 @@ React.useEffect(()=>{
             <input
                 type="email"
                 name="email"
-                className="form-control"
+                className="form-control my-4"
                 placeholder="Email"
                 value={email}
                  onChange={(e)=> setEmail(e.target.value)}
@@ -43,7 +42,7 @@ React.useEffect(()=>{
             <input
                 type="password"
                 name="password"
-                className="form-control"
+                className="form-control my-4"
                 placeholder="Password"
                 value={password}
                  onChange={(e)=> setPassword(e.target.value)}

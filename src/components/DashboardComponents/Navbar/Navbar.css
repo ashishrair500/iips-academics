@@ -1,8 +1,12 @@
  
 
 .navbar {
-  background: linear-gradient(to right, #373b44, #2f3031);
+  background: linear-gradient(to right, #5b5d5f, #092c4f);
     padding: 10px 20px;  
+    box-shadow: 
+    0 0 20px black, /* Greyish shadow */
+    0 0 30px black, /* Highlight at the top */
+    inset 0 0 20px rgba(0, 0, 0, 0.5); 
   }
   
   .navbar-container {

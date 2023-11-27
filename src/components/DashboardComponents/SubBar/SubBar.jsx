@@ -28,7 +28,7 @@ const Subbar = ({
   };
 
   return (
-    <nav className="navbar">
+    <nav className="">
       <nav className="ms-5" aria-label="breadcrumb">
         <ol className="breadcrumb  d-flex align-items-center">
           {currentFolder !== "root" ? (

@@ -1,0 +1,50 @@
+/* AboutUs.css */
+
+.about-us-container {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  h2 {
+     color: aliceblue !important;
+     font-size: 50px !important;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .team-member {
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .team-member img {
+    width: auto;
+    height: 200px;
+    border-radius: 50%;
+   
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+     color: aliceblue !important;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    color: aliceblue !important;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  .social-links a:hover{
+   
+    color: yellow!important;
+     
+  }

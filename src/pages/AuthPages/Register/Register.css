@@ -23,19 +23,24 @@ body, html {
   .register-heading {
     background: linear-gradient(to right, #7eff7c, rgb(255, 255, 11)); /* Gradient text color */
     -webkit-background-clip: text; /* Clip the text to the background gradient */
+    background-clip: text; /* Define the standard property for compatibility */
     color: transparent;
-    font-size: 2em; /* Adjust the font size for the heading */
-    margin-bottom: 20px; /* Add some spacing below the heading */
+    font-size: 3em; /* Adjust the font size for the heading */
+     /* Add some spacing below the heading */
     font-weight: bolder;
+    padding-bottom: 30px;
   }
   
  
-  
   .register-login-link {
     background: linear-gradient(to right, #ff3232, #89b659); /* Gradient text color */
     -webkit-background-clip: text; /* Clip the text to the background gradient */
+    background-clip: text; /* Define the standard property for compatibility */
     color: transparent;
-    font-size: 1.5em; /* Adjust the font size for the link */
+    font-size: 2em; /* Adjust the font size for the link */
      font-weight: bolder;
+     padding: 47px;
+    
   }
+  
   

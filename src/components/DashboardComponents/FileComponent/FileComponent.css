@@ -11,11 +11,11 @@
 .glow-on-hover {
     
   
-    height: 50px;
-    width: 200px;
-    color: #ff0000;
+    height: 70px;
+    width: 227px;
+    
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bolder;
   }
   
@@ -30,11 +30,12 @@
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
+    animation: glow 20s linear infinite;
     opacity: 1; /* Set initial opacity to 1 */
     transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
     font-size: 100px;
+    padding: 5px;
   }
   
   .glow-on-hover:active {
@@ -61,4 +62,8 @@
     border-radius: 10px;
   }
   
- 
+  @keyframes glow {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
