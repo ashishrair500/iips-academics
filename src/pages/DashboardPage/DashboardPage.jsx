@@ -22,11 +22,17 @@ const DashboardPage = () => {
   const [showSubBar, setShowSubBar] = useState(true);
 
   const { pathname } = useLocation();
-  const { isLoggedIn, isLoading, userId } = useSelector(
+
+
+
+
+
+  const { isLoggedIn, isLoading, userId ,currentFolder} = useSelector(
     (state) => ({
       isLoggedIn: state.auth.isAuthenticated,
       isLoading: state.filefolders.isLoading,
       userId: state.auth.user.uid,
+      currentFolder: state.filefolders.currentFolder,
     }),
     shallowEqual
   );
@@ -61,11 +67,18 @@ const DashboardPage = () => {
 
      
       <Navbar />
-      <div className='line-break'></div>
+      
       <a href="https://forms.gle/v6PXeXPVk3W57sgt5" target="_blank" className='contribute-button'>
       अपने Study Material को साझा करने के लिए click करें !</a>
       
 
+      {currentFolder === "root" ? (
+        <p className='search-ins'>Please use Ctrl+F to search your subject</p>
+              
+          ) : (
+            <h1></h1>
+          )}
+       
 
       {showSubBar && (
         <SubBar

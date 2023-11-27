@@ -13,13 +13,37 @@
      
    display: flex;
     justify-content: center;
-    text-decoration: none; /* Remove underline */
+  
     transition: all 0.3s ease-in-out;
     white-space: nowrap;
-    text-decoration:underline
+    text-decoration:underline;
+    padding-top: 18px;
 
   }
+  .search-ins {
+    text-align: center;
+    color: black; /* Initial color */
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px; /* Adjust as needed */
+    animation: colorTransition 10s linear infinite; /* Adjust animation duration as needed */
+    font-style: italic;
+  }
   
+  @keyframes colorTransition {
+    0% {
+      color: red;
+    }
+    50% {
+      color: white;
+    }
+    75% {
+      color: red;
+    }
+    100% {
+      color: white;
+    }
+  }
   .contribute-button:hover {
     color: rgb(251, 73, 73);
     transform: scale(1.5);

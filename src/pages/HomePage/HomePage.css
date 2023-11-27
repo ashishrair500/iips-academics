@@ -25,7 +25,7 @@ body, html {
 
 .home-content {
   text-align: center;
-  padding: 20px;
+  padding: 11px;
 }
 .home-content>img {
   height: 200px;
@@ -49,8 +49,10 @@ body, html {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 20px;
+  padding-bottom: 34px;
+  margin-top: 7px;
 }
 /* HomePage.css (Only the relevant part) */
 
@@ -74,37 +76,23 @@ body, html {
   flex: 1;
   text-align: center;
 }
-
 .logo-image {
-  
   height: 375px;
   width: auto; /* Adjust the width as needed */
   margin-bottom: 40px;
-  border: 10px solid rgb(209, 116, 255);
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(220, 219, 220, 0.3); /* Greyish shadow */
+  
+   border-radius: 10px; 
+  box-shadow: 
+    0 0 30px black, /* Greyish shadow */
+    0 0 50px black, /* Highlight at the top */
+    inset 0 0 20px rgba(0, 0, 0, 0.5); /* Darker shade inside the box */
+
+
+
   transition: transform 0.3s ease-in-out;
 }
-.logo-image:before, .logo-image:after {
-  position:absolute;
-  z-index:-2;
-  content:"";
-}
-.logo-image:before {
-  top:2%;
-  bottom:2%;
-  left:2%;
-  right:2%;
-  -webkit-border-radius:15%;		
-  -moz-border-radius:15%;
-  border-radius:15%;
-  -webkit-box-shadow:0px -1px 25px rgb(255, 255, 255), 0px 1px 25px rgba(0,0,0,0.7);
-  -moz-box-shadow:0px -1px 25px rgba(255, 255, 255, 0.5), 0px 1px 25px rgba(0,0,0,0.7);
-  box-shadow:0px -1px 25px rgba(0, 0, 0, 0.5), 0px 1px 25px rgba(0,0,0,0.7);
-}
-.logo-image:hover {
-  transform: scale(1.1); /* Grow on hover */
-}
+
+ 
 .home-para{
   /* background: linear-gradient(to right, #ffffff, #f39c12); */
   -webkit-background-clip: text;
@@ -118,22 +106,107 @@ body, html {
    padding-left: 100px;
    padding-right: 100px;
 }
-.carousel {
-  margin-top: 20px;
-  display: flex;
-  overflow: hidden;
+
+.glow-on-hover {
+  padding: 18px;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+color:white;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: home 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  font-size: 100px;
+  text-decoration: none;
+  padding:4px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
   width: 100%;
-  height: 200px;
-  animation: scroll 25s linear infinite; 
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glow {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+.carousel {
+  margin-top: 57px;
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  height: 250px;
+  /* animation: scroll 20s linear infinite;  */
+  
 }
 
 .carousel img {
   width: auto;
-  max-width: 100%;
+  
   margin-right: 10px;
   border-radius: 5px;
 }
-
+.iips-linkedin{
+   
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 70px; 
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.iips-linkedin:hover{
+  color:yellow;
+}
+.iips-linkedin img{
+  height: 33px;
+  width: auto;
+  border-radius: 12px;
+}
 @keyframes scroll {
   0% {
     transform: translateX(100%);

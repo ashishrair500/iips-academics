@@ -1,9 +1,25 @@
+
+ 
+.form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+
+
 .glow-on-hover {
+    padding: 18px;
     width: 220px;
     height: 50px;
     border: none;
     outline: none;
-    color: #fff;
+   
     background: #111;
     cursor: pointer;
     position: relative;
@@ -22,7 +38,7 @@
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
+    animation: register-glow 20s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
@@ -52,7 +68,7 @@
     border-radius: 10px;
 }
 
-@keyframes glowing {
+@keyframes register-glow {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { signUpUser } from '../../redux/actionCreators/authActionCreator';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import'./Register.css'
+import'./RegisterForm.css'
 const RegisterForm = () => {
 
     const [name, setName] = React.useState("")
@@ -42,7 +42,7 @@ React.useEffect(()=>{
                 <input
                     type="text"
                     name="name"
-                    className="form-control"
+                    className="form-control my-3"
                     placeholder="Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -53,7 +53,7 @@ React.useEffect(()=>{
                 <input
                     type="email"
                     name="email"
-                    className="form-control"
+                    className="form-control my-3"
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -64,7 +64,7 @@ React.useEffect(()=>{
                 <input
                     type="password"
                     name="password"
-                    className="form-control"
+                    className="form-control my-3"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -74,7 +74,7 @@ React.useEffect(()=>{
                 <input
                     type="password"
                     name="passwordConfirmation"
-                    className="form-control"
+                    className="form-control my-3 "
                     placeholder="Re-type Password"
                     value={passwordConfirmation}
                     onChange={(e) => setPasswordConfirmation(e.target.value)}

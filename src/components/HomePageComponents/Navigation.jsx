@@ -18,8 +18,8 @@ const NavigationComponent = () => {
         <Link className='navbar-brand' to='/aboutus'>
           Aboutus
         </Link>
-        <Link className='navbar-brand' to='/contactus'>
-          Contactus
+        <Link className='navbar-brand' to='https://github.com/ashishrair500/iips-academics' target="_blank">
+           Github
         </Link>
       </div>
 
@@ -31,11 +31,7 @@ const NavigationComponent = () => {
                 <span className='user-name'>{user.displayName.toUpperCase()}</span>
               </p>
             </li>
-            {/* <li className='nav-item'>
-              <Link className='dashboard-btn' to='/dashboard'>
-                Dashboard
-              </Link>
-            </li> */}
+           
             <li className='nav-item'>
               <button className='logout-btn' onClick={() => dispatch(signOutUser())}>
                 Logout

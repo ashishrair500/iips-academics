@@ -16,11 +16,11 @@ const Navbar = () => {
         </Link>
 
         <div className='navbar-links'>
-          <Link className='navbar-link' to='/aboutus'>
+          <Link className='navbar-brand' to='/aboutus'>
             Aboutus
           </Link>
-          <Link className='navbar-link' to='/contactus'>
-            Contactus
+          <Link className='navbar-brand' to='https://github.com/ashishrair500/iips-academics'>
+            Github
           </Link>
         </div>
 </div>
@@ -29,15 +29,15 @@ const Navbar = () => {
             <>
              
               <li className='nav-item'>
-                <Link className='Home' to='/'>
+                <Link className='Home navbar-brand' to='/'>
                   Home
                 </Link>
-                <img src="../../../../public/home-icon.png"></img>
+                <img src="../../../../public/static/home-icon.png"></img>
               </li>
               <li className='nav-item'>
                 <p className='user-welcome'>
                 <span className='user-name'>{user.displayName?.toUpperCase()}</span>
-                  <img className='admin-icon' src="../../../../public/admin-icon.png"></img>
+                  <img className='admin-icon' src="../../../../public/static/admin-icon.png"></img>
                 </p>
                
               </li>

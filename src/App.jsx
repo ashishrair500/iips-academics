@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { useDispatch } from 'react-redux'
-import {Login, Register,HomePage,DashboardPage,Aboutus,Contactus} from "./pages/index.js"
+import {Login, Register,HomePage,DashboardPage,Aboutus} from "./pages/index.js"
 import React from 'react'
 import { checkIsLoggedIn } from './redux/actionCreators/authActionCreator'
 import { ToastContainer  } from 'react-toastify'
@@ -26,7 +26,7 @@ const App =() => {
      <Route path='/register' element={<Register/>}/>
      <Route path='/dashboard/*' element={<DashboardPage/>}/>
      <Route path='/aboutus/' element={<Aboutus/>}/>
-     <Route path='/contactus/' element={<Contactus/>}/>
+     
 
     </Routes>
      

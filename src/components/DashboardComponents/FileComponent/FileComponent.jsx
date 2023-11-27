@@ -66,7 +66,7 @@ const FileComponent = () => {
                   : currentFile?.data.name}
               </p>
               <div className='center-div'>
-                <button className='glow-on-hover' onClick={() => navigate(-1)}>
+                <button className='glow-on-hover' onClick={() => navigate(-3)}>
                   Go Back
                 </button>
                 {/* The download button is automatically triggered by the useEffect hook */}
