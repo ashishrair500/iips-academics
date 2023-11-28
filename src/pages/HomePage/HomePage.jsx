@@ -2,11 +2,24 @@ import React from 'react';
 import { NavigationComponent } from '../../components/HomePageComponents';
 import './HomePage.css'; // Import your styles
 import '../DashboardPage/footer.css';
-
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 import FooterComponent from '../../components/FooterComponent/Footer';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { shallowEqual } from 'react-redux';
+
+
+
 
 const HomePage = () => {
+
+  const { isLoggedIn} = useSelector(
+    (state) => ({
+      isLoggedIn: state.auth.isAuthenticated,
+    }),
+    shallowEqual
+  );
+  
   return (
     <>
       <div>
@@ -16,7 +29,6 @@ const HomePage = () => {
             <h1 className='home-heading'>
               ||  सा विद्या या विमुक्तये ||
             </h1>
-
 
             <div className='content-below-line'>
               <div className='text-container'>
@@ -49,8 +61,8 @@ const HomePage = () => {
               </div>
 
             </div>
-            <Link className='glow-on-hover' to='/dashboard'>
-              Explore Study Material
+            <Link className='glow-on-hover' to={isLoggedIn ? '/dashboard' : '/login'}>
+               Explore Study Material
             </Link>
             <div className='carousel'>
               {/* Add your carousel images here */}
