@@ -77,7 +77,7 @@ const HomePage = () => {
         </div>
       </div>
       <a href="https://www.linkedin.com/school/iips-davv/" target="_blank" className='iips-linkedin'
-      >@International Institue of Professional Studies
+      >@International Institute of Professional Studies
  
         <img src="../../../public/assets/linkedin-logo.jpg" ></img>
  
