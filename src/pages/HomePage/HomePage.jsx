@@ -34,7 +34,7 @@ const HomePage = () => {
               <div className='text-container'>
 
 
-                <p className='home-para'>
+                <div className='home-para'>
                   <h1>Our Moto.... &emsp; &emsp;</h1>
                   We devoted to make this a platform where
                    respective faculties can upload their study material
@@ -48,7 +48,7 @@ const HomePage = () => {
          
   
 
-                </p>
+                </div>
               </div>
               <div className='image-container'>
                 <img
