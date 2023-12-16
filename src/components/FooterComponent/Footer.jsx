@@ -15,7 +15,7 @@ const FooterComponent = () => {
         <div className='column'>
           <ul>
             <li><a href="https://drive.google.com/file/d/175LfQtejcTzsOa7-eKU41m-gJ-3Jqejq/view?usp=drive_link"target="_blank">Academic Calendar</a></li>
-            <li><a href="https://www.dauniv.ac.in/"target="_blank">Upcoming Exam Time Tables</a></li>
+            <li><a href="https://drive.google.com/file/d/1SOP1oO4tKTByTqBKoXsoJCk1Is094DXz/view"target="_blank">Upcoming Exam Time Tables</a></li>
             <li><a href="/"target="_blank">Grievances/Suggestions</a></li>
             {/* Add more list items as needed */}
           </ul>
