@@ -76,7 +76,7 @@ const DashboardPage = () => {
         <p className='search-ins'>Please use Ctrl+F to search your subject</p>
               
           ) : (
-            <h1></h1>
+            <p className='search-ins'>Please use Ctrl+F to search your subject</p>
           )}
        
 

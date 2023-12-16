@@ -21,10 +21,11 @@ color: #ffc107;
 .navbar-nav .btn {
 background-color: transparent;
 border: none;
-color: #333;
+ color: rgb(131, 255, 253);
 font-size: 24px;
 margin-right: 5px;
 transition: all 0.3s ease-in-out;
+ 
 }
 
 .navbar-nav .btn:hover {
