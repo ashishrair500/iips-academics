@@ -5,7 +5,7 @@ import '../DashboardPage/footer.css';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import FooterComponent from '../../components/FooterComponent/Footer';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+
 import { shallowEqual } from 'react-redux';
 
 
