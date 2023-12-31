@@ -39,7 +39,7 @@ const HomeComponent = () => {
             title={"Created Files"}
             type={"file"}
             items={userFiles.filter((file) => file.data.url === null)}
-          /> */}
+            />*/}
           {currentFolder !== "root" ? (
             <ShowItems
               title={"Notes"}
