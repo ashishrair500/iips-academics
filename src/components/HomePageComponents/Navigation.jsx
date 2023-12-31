@@ -21,6 +21,9 @@ const NavigationComponent = () => {
         <Link className='navbar-brand' to='https://github.com/ashishrair500/iips-academics' target="_blank">
            Github
         </Link>
+        <Link className='navbar-brand' to='/our-contributers'>
+          Our Contributers
+        </Link>
       </div>
 
       <ul className='navbar-nav'>

@@ -22,6 +22,9 @@ const Navbar = () => {
           <Link className='navbar-brand' to='https://github.com/ashishrair500/iips-academics'>
             Github
           </Link>
+          <Link className='navbar-brand' to='/our-contributers'>
+          Our Contributers
+        </Link>
         </div>
 </div>
         <ul className='navbar-nav'>
