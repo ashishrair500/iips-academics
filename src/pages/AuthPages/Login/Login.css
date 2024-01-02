@@ -27,7 +27,18 @@ body, html {
     font-size: 3em; /* Adjust the font size for the heading */
     margin-bottom: 20px; /* Add some spacing below the heading */
     font-weight: bolder;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+  }
+  .heading-2 {
+    background: linear-gradient(to right, #7eff7c, rgb(255, 255, 11)); /* Gradient text color */
+    -webkit-background-clip: text; /* Clip the text to the background gradient */
+    background-clip: text; /* Define the standard property for compatibility */
+    color: transparent;
+    font-size: 3em; /* Adjust the font size for the heading */
+  padding-top: 10px;
+  
+    font-weight: bolder;
+    
   }
   
  
@@ -42,3 +53,6 @@ body, html {
      padding:47px
   }
   
+
+
+ 
