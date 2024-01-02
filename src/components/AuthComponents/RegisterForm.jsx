@@ -1,91 +1,52 @@
+// RegisterForm.jsx
 import React from 'react';
-import { useDispatch } from 'react-redux';
-
-import { signUpUser } from '../../redux/actionCreators/authActionCreator';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import'./RegisterForm.css'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import './RegisterForm.css';
+
 const RegisterForm = () => {
+  const [success, setSuccess] = React.useState(false);
+  const navigate = useNavigate();
 
-    const [name, setName] = React.useState("")
-    const [email, setEmail] = React.useState("")
-    const [password, setPassword] = React.useState("")
-    const [passwordConfirmation, setPasswordConfirmation] = React.useState("")
-    const [ success,setSuccess] = React.useState(false)
-const dispatch = useDispatch()
-const navigate = useNavigate()
-
-const handleSubmit = (e) =>{
-
-    e.preventDefault();
-    if(!name || !email || !password || !passwordConfirmation){
-        toast.error("Please fill in all fields")
-        return;
-
+  const handleGoogleSignIn = async () => {
+    try {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      const result = await firebase.auth().signInWithPopup(provider);
+      const user = result.user;
+      alert("Sign in successful");
+      console.log('Google Sign-In Successful:', user);
+      // Redirect to the dashboard page
+      navigate('/dashboard');
+    } catch (error) {
+      console.error('Google Sign-In Error:', error.message);
     }
-    if(password !== passwordConfirmation){
-        toast.error("Password do not match ")
-        return
+  };
+
+  React.useEffect(() => {
+    if (success) {
+      navigate('/dashboard');
     }
-    dispatch(signUpUser(name,email,password,setSuccess));//we are sending to the redux; authActionCreator signup;
-}
+  }, [success, navigate]);
 
-React.useEffect(()=>{
-    if(success){
-         //jaise hi authActionCreator signup , success ko true kr dega then user will redirect to the dashboard page
-        navigate("/dashboard") 
-    }
-},[success])
-    return (
-        <form autoComplete='off' onSubmit={handleSubmit} >
-            <div className="form-group my-2">
-                <input
-                    type="text"
-                    name="name"
-                    className="form-control my-3"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
-            </div>
+  return (
+    <form autoComplete='off'>
+      {/* Google Sign-In Button */}
+      <button type='button' onClick={handleGoogleSignIn} className='google-signin-btn'>
+        <span className='google-icon'>
+          {/* Add your Google icon here (you can use an SVG or an image) */}
+          <img
+ 
+ src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
 
-            <div className="form-group my-2">
-                <input
-                    type="email"
-                    name="email"
-                    className="form-control my-3"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-            </div>
+ alt="Google Logo"
+ 
+/>
+        </span>
+        Sign in with Google
+      </button>
+    </form>
+  );
+};
 
-            <div className="form-group my-2">
-                <input
-                    type="password"
-                    name="password"
-                    className="form-control my-3"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-            </div>
-            <div className="form-group my-2">
-                <input
-                    type="password"
-                    name="passwordConfirmation"
-                    className="form-control my-3 "
-                    placeholder="Re-type Password"
-                    value={passwordConfirmation}
-                    onChange={(e) => setPasswordConfirmation(e.target.value)}
-                />
-            </div>
-
-
-
-            <button type="submit" className='glow-on-hover'>Register</button>
-        </form>
-    )
-}
-
-export default RegisterForm
+export default RegisterForm;

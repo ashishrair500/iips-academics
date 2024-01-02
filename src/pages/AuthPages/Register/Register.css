@@ -1,46 +1,49 @@
 /* Register.css */
 
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-size: 25px; /* Set a base font size for the entire page */
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 25px; /* Set a base font size for the entire page */
+}
+
+.register-container {
+  background: linear-gradient(to right, #373b44, #4286f4); /* Gradient background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.register-content {
+  text-align: center;
+}
+
+.register-heading {
+  background: linear-gradient(to right, #7eff7c, rgb(255, 255, 11)); /* Gradient text color */
+  -webkit-background-clip: text; /* Clip the text to the background gradient */
+  background-clip: text; /* Define the standard property for compatibility */
+  color: transparent;
+  font-size: 4em; /* Adjust the font size for the heading */
+  font-weight: bolder;
+  padding-bottom: 30px;
+
   
-  .register-container {
-    background: linear-gradient(to right, #373b44, #4286f4); /* Gradient background */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .register-content {
-    text-align: center;
-  }
-  
-  .register-heading {
-    background: linear-gradient(to right, #7eff7c, rgb(255, 255, 11)); /* Gradient text color */
-    -webkit-background-clip: text; /* Clip the text to the background gradient */
-    background-clip: text; /* Define the standard property for compatibility */
-    color: transparent;
-    font-size: 3em; /* Adjust the font size for the heading */
-     /* Add some spacing below the heading */
-    font-weight: bolder;
-    padding-bottom: 30px;
-  }
-  
- 
-  .register-login-link {
-    background: linear-gradient(to right, #ff3232, #89b659); /* Gradient text color */
-    -webkit-background-clip: text; /* Clip the text to the background gradient */
-    background-clip: text; /* Define the standard property for compatibility */
-    color: transparent;
-    font-size: 2em; /* Adjust the font size for the link */
-     font-weight: bolder;
-     padding: 47px;
-    
-  }
-  
-  
+  position: relative;
+   
+}
+
+.register-login-link {
+  background: linear-gradient(to right, #ff3232, #89b659); /* Gradient text color */
+  -webkit-background-clip: text; /* Clip the text to the background gradient */
+  background-clip: text; /* Define the standard property for compatibility */
+  color: transparent;
+  font-size: 2em; /* Adjust the font size for the link */
+  font-weight: bolder;
+  padding: 47px;
+}
+
+.register-login-link:hover {
+  color: #fff;
+}
