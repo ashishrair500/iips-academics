@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import RegisterForm from '../../../components/AuthComponents/RegisterForm';
 import './Register.css'; // Import your styles
 
@@ -11,7 +11,7 @@ const Register = () => {
 
         <div className='register-form'>
           <RegisterForm />
-          <Link to="/login" className='register-login-link'>Already a member? Login</Link>
+        
         </div>
       </div>
     </div>
