@@ -81,7 +81,10 @@ const Contributer = () => {
         </table>
         <div className="thank-you-note">
           <p>
-            Thank You for Contributing to iips.Academics. This is a huge help for our upcoming juniors! 😊
+            Dear Contributer, Thank you so much.🙂
+          </p>
+          <p>
+            Your contribution is the Big help for all IIPS students. 👍
           </p>
         </div>
       </div>

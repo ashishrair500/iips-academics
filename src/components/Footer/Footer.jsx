@@ -9,7 +9,7 @@ const Footer = () => {
           <ul>
             <li><a href="https://iips.edu.in/"target="_blank">IIPS Official</a></li>
             <li><a href="https://www.dauniv.ac.in/" target="_blank">DAVV Official</a></li>
-            <li><a href="https://swayam.gov.in/"target="_blank">Swayam</a></li>
+            <li><a href="https://swayam.gov.in/"target="_blank">Swayam Portal</a></li>
             {/* Add more list items as needed */}
           </ul>
         </div>

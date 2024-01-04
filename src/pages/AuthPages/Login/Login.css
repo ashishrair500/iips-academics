@@ -38,6 +38,7 @@ body, html {
 .heading-2 {
   font-size: 2.5em;
   padding-top: 10px;
+  margin-bottom: 0px;
 }
 
 .login-register-link {
@@ -50,6 +51,32 @@ body, html {
   justify-content: center;
   align-items: center;
 }
+.google-signin-btn {
+  margin-left: 50px;
+  background-color: black;
+  color: rgb(20, 71, 228);
+  padding: 15px 20px; /* Adjust padding for a larger button size */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2em; /* Increase font size for better responsiveness */
+  font-weight: bold; /* Make the text bold */
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Align items horizontally in the center */
+}
+
+.google-signin-btn:hover {
+  background-color: white; /* Darker Google Blue on hover */
+}
+
+.google-icon img {
+  margin-right: 10px; /* Reduce spacing between the text and the Google icon */
+  width: 60px; /* Set a fixed width for the Google icon image */
+}
+
+
+ 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .login-content {
@@ -65,5 +92,14 @@ body, html {
 
   .login-register-link {
     padding: 10px;
+  }
+  .google-signin-btn {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    padding: 12px 15px; /* Adjust padding for smaller screens */
+    margin-left: 0px;
+  }
+
+  .google-icon img {
+    width: 40px; /* Adjust the width for smaller screens */
   }
 }

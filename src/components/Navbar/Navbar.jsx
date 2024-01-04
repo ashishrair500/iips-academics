@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className='navbar-container'>
         <div className='navbar-links'>
           {isAuthenticated ? (
-            <Link className='navbar-brand' to='/'>
+            <Link className='navbar-brand' to='/dashboard'>
               iips.Academics
             </Link>
           ) : (
@@ -37,7 +37,7 @@ const Navbar = () => {
             
               <li className='nav-item'>
              
-                <Link className='navbar-brand' to='/dashboard'>
+                <Link className='navbar-brand' to='/'>
                   Home
                 </Link>
                 <img src="../../../../public/assets/home-icon.png" alt="Home" />
@@ -47,7 +47,10 @@ const Navbar = () => {
             {location.pathname === '/' && (
               <li className='nav-item'>
                 <button className='logout-btn' onClick={() => dispatch(signOutUser())}>
-                  Logout
+              
+                Logout
+                <img src="../../../public/assets/log-out.png" alt="log out" width="70px" />
+      
                 </button>
               </li>
             )}
@@ -63,9 +66,15 @@ const Navbar = () => {
         ) : (
           <>
             <li className='nav-item'>
-              <Link className='login-btn' to='/Register'>
-                Sign In / Sign Up
-                <img src="../../../public/assets/sign-in_icon.jpg" alt="Sign In" width="70px" />
+              <Link className='login-btn' to='/login'>
+                Sign In
+                <img src="../../../public/assets/sign-in_icon.png" alt="Sign In" width="70px" />
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='register-btn' to='/Register'>
+                Sign Up
+                <img src="../../../public/assets/sign-up_icon.jpg" alt="Sign In" width="70px" />
               </Link>
             </li>
           </>

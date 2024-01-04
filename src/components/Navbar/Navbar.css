@@ -1,5 +1,6 @@
 /* Navbar.css */
 
+
 /* Default styles */
 .navbar {
   background: linear-gradient(to right, #5b5d5f, #092c4f);
@@ -73,11 +74,11 @@ li img {
   height: 40px;
   width: auto;
 }
-.login-btn,
+.register-btn,.login-btn,
 .logout-btn {
   color: white;
   text-decoration: none;
-  padding: 10px 17px;
+  padding: 8px 9px;
   border: none;
   cursor: pointer;
   border-radius: 15px;
@@ -87,35 +88,7 @@ li img {
   position: relative;
   z-index: 0;
 
-  /* Apply the glow effect */
-  &:before,
-  &:hover:before {
-    content: '';
-    background: linear-gradient(
-      45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glow-it 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-  }
+   
 
   /* Apply the shadow effect */
   &:after,
@@ -125,7 +98,7 @@ li img {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #111;
+    background: linear-gradient(to right, #314f8d, #03363c);
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -140,30 +113,29 @@ li img {
 }
 
 /* Add the animation for the glowing effect */
-@keyframes glow-it {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
+ 
 .logout-btn {
   
-  padding: 8px;
-    margin-left: 16px;
-  color: red !important;
+  padding: 3px  10px;
+  margin-left: 16px;
+  font-weight: bold !important;
+  font-size: 1.3em !important;
+
+
 }
 .logout-btn:hover {
   
    font-weight: bold !important;
 }
-a.login-btn{
-  margin-top: 10px;
-   margin-left: 90px;
+.register-btn img,.login-btn img{
+  padding-left: 5px;
+
+}
+.register-btn {
+  margin-right: -4px !important;
+}
+.login-btn {
+  margin-right: 0px !important;
 }
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
@@ -195,5 +167,22 @@ a.login-btn{
     color: #ffc107;
     font-weight: bolder;
   }
+  .login-btn{
+    margin-top: 10px !important;
+    margin-left: 60px !important;
+  }
+  .register-btn{
+    margin-top: 10px !important;
+     
+  }
+  .logout-btn {
+     font-size: 1.3em !important;
+     margin-top: 10px;
+     margin-right:60px;
+     padding :0px 0px;
+}
+  .logout-btn img {
+     margin-right:50px
+}
 }
 
