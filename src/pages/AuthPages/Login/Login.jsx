@@ -19,11 +19,12 @@ const LoginPage = () => {
     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
      alt="Google Logo"/>
             </span>
-            Sign in with Google
+            <Link to="/register">Sign in with Google</Link>
+            
           </button>
          </div>
         
-          <Link to="/register" className='login-register-link'>Not a member? Register</Link>
+          
         </form>
        
       </div>
