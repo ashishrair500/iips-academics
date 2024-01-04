@@ -177,13 +177,17 @@ a.login-btn{
     align-items: center; /* Center the items */
   }
 .navbar-brand {
-    font-size: 15px !important;
-    padding-left: 80px;
+   
+    padding-left: 55px;
   }
   .navbar-link {
     padding: 10px;
     text-align: center;
   }
+  li img {
+    
+    padding-left: 54px;
+}
   .user-welcome {
      font-size: 1em;
   }
