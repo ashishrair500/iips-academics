@@ -7,11 +7,11 @@ const Register = () => {
   return (
     <div className='register-container'>
       <div className='register-content'>
-        <h1 className='register-heading'>Register</h1>
+        <h1 className='register-heading'>Welcome</h1>
 
         <div className='register-form'>
           <RegisterForm />
-        
+      
         </div>
       </div>
     </div>

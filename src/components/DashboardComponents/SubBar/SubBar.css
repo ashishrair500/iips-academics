@@ -17,7 +17,12 @@ color: #333;
 .breadcrumb-item:hover {
 color: #ffc107;
 }
-
+.navbar-nav{
+  display: flex;
+  
+  justify-content: center;
+  /* margin-left: 300px !important; */
+}
 .navbar-nav .btn {
 background-color: transparent;
 border: none;
@@ -53,5 +58,6 @@ border-color: #007bff;
 background-color: #0056b3;
 border-color: #0056b3;
 }
+
 
 /* Additional style for contribute button */

@@ -67,7 +67,7 @@ const Subbar = ({
 
       {user.uid === "T3XBsF3xtDMgTRQIi7xVQYqffpe2" ? (
         <>
-          <ul className="navbar-nav ms-auto me-4">
+          <ul className="navbar-nav">
             <li className="nav-item mx-2">
               <button className="btn btn-outline-dark"
                 onClick={() => setIsFileUploadOpen(true)}

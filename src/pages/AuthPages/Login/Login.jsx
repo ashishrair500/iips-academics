@@ -13,14 +13,16 @@ const LoginPage = () => {
         </div>
         <h1 className='heading-2'>Or</h1>
         <form autoComplete='off'>
-         
-          <button type='button'  className='google-signin-btn'>
+         <div className='button-center'>
+         <button type='button'  className='google-signin-btn'>
             <span className='google-icon'>
     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
      alt="Google Logo"/>
             </span>
             Sign in with Google
           </button>
+         </div>
+        
           <Link to="/register" className='login-register-link'>Not a member? Register</Link>
         </form>
        

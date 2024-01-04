@@ -28,22 +28,7 @@ body, html {
   font-size: 4em; /* Adjust the font size for the heading */
   font-weight: bolder;
   padding-bottom: 30px;
-
-  
   position: relative;
    
 }
-
-.register-login-link {
-  background: linear-gradient(to right, #ff3232, #89b659); /* Gradient text color */
-  -webkit-background-clip: text; /* Clip the text to the background gradient */
-  background-clip: text; /* Define the standard property for compatibility */
-  color: transparent;
-  font-size: 2em; /* Adjust the font size for the link */
-  font-weight: bolder;
-  padding: 47px;
-}
-
-.register-login-link:hover {
-  color: #fff;
-}
+ 

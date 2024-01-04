@@ -14,8 +14,8 @@ const RegisterForm = () => {
       const provider = new firebase.auth.GoogleAuthProvider();
       const result = await firebase.auth().signInWithPopup(provider);
       const user = result.user;
-      alert("Sign in successful");
-      console.log('Google Sign-In Successful:', user);
+      alert("Welcome "+user.displayName+" !");
+      console.log('Google Sign-In Successful:', user.displayName);
       // Redirect to the dashboard page
       navigate('/dashboard');
     } catch (error) {

@@ -1,58 +1,69 @@
 /* Login.css */
 
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-size: 25px; /* Set a base font size for the entire page */
-  }
-  
-  .login-container {
-   background: linear-gradient(to right, #373b44, #4286f4);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-content {
-    text-align: center;
-  }
-  
-  .login-heading {
-    background: linear-gradient(to right, #7eff7c, rgb(255, 255, 11)); /* Gradient text color */
-    -webkit-background-clip: text; /* Clip the text to the background gradient */
-    background-clip: text; /* Define the standard property for compatibility */
-    color: transparent;
-    font-size: 3em; /* Adjust the font size for the heading */
-    margin-bottom: 20px; /* Add some spacing below the heading */
-    font-weight: bolder;
-    padding-bottom: 20px;
-  }
-  .heading-2 {
-    background: linear-gradient(to right, #7eff7c, rgb(255, 255, 11)); /* Gradient text color */
-    -webkit-background-clip: text; /* Clip the text to the background gradient */
-    background-clip: text; /* Define the standard property for compatibility */
-    color: transparent;
-    font-size: 3em; /* Adjust the font size for the heading */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 25px; /* Set a base font size for the entire page */
+}
+
+.login-container {
+  background: linear-gradient(to right, #373b44, #4286f4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content {
+  text-align: center;
+  max-width: 500px; /* Set a maximum width for the content */
+  width: 90%; /* Adjust the width as needed */
+}
+
+.login-heading,
+.heading-2,
+.login-register-link {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.login-heading {
+  font-size: 3em;
+}
+
+.heading-2 {
+  font-size: 2.5em;
   padding-top: 10px;
-  
-    font-weight: bolder;
-    
+}
+
+.login-register-link {
+  font-size: 1.5em;
+  padding: 15px;
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .login-content {
+    width: 80%; /* Adjust the width for smaller screens */
   }
-  
- 
-  
+
+  .login-heading,
+  .heading-2,
+  .login-register-link
+  {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+
   .login-register-link {
-    background: linear-gradient(to right, #ff3232, #89b659); /* Gradient text color */
-    -webkit-background-clip: text; /* Clip the text to the background gradient */
-    background-clip: text; /* Define the standard property for compatibility */
-    color: transparent;
-    font-size: 2em; /* Adjust the font size for the link */
-     font-weight: bolder;
-     padding:47px
+    padding: 10px;
   }
-  
-
-
- 
+}

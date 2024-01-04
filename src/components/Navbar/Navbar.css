@@ -1,15 +1,17 @@
-/* Navigation.css */
+/* Navbar.css */
 
+/* Default styles */
 .navbar {
-  background: linear-gradient(to right, #373b44, #4286f4); 
-  box-shadow: 
-  0 0 20px black, /* Greyish shadow */
-  0 0 30px black, /* Highlight at the top */
-  inset 0 0 20px rgba(0, 0, 0, 0.5); 
+  background: linear-gradient(to right, #5b5d5f, #092c4f);
+  padding: 10px 20px;
+  box-shadow: 0 0 20px black, 0 0 30px black, inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-container {
+  max-width: 1200px;
+  margin-left: 40px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -19,6 +21,17 @@
   font-weight: bolder;
   color: #fffb00;
   margin-right: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
 }
 
 .navbar-nav {
@@ -34,20 +47,33 @@
 .nav-item {
   display: inline-block !important; /* Ensure horizontal display */
 }
-
 .user-welcome {
   margin: 0;
   font-size: 1.2em;
   font-weight: bolder;
+  padding: 10px;
+  padding-top: 15px;
+  
 }
 
 .user-name {
+  color: #ffc107;
   font-size: 1.4em;
   font-weight: bolder;
 }
 
+li img {
+  height: 25px;
+  width: auto;
+}
+
+.user-icon {
+  padding-left: 5px;
+  padding-bottom: 10px;
+  height: 40px;
+  width: auto;
+}
 .login-btn,
-.register-btn,
 .logout-btn {
   color: white;
   text-decoration: none;
@@ -127,48 +153,43 @@
 }
 .logout-btn {
   
-  padding: 7px;
+  padding: 8px;
+    margin-left: 16px;
   color: red !important;
 }
 .logout-btn:hover {
   
    font-weight: bold !important;
 }
-/* Responsive Styles */
+a.login-btn{
+  margin-top: 10px;
+   margin-left: 90px;
+}
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px;
   }
-
-  .navbar-brand {
-    font-size: 1.2em;
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Center the items */
   }
-
-  .user-welcome,
-  .user-name,
-  .login-btn,
-  .register-btn,
-  .logout-btn  {
-    font-size: 1em;
-    padding: 8px 12px;
+.navbar-brand {
+    font-size: 15px !important;
+    padding-left: 80px;
   }
-}
-
-@media (max-width: 576px) {
-  .navbar {
+  .navbar-link {
     padding: 10px;
+    text-align: center;
   }
-
-  .navbar-brand {
-    font-size: 1em;
+  .user-welcome {
+     font-size: 1em;
   }
-
-  .user-welcome,
-  .user-name,
-  .login-btn,
-  .register-btn,
-  .logout-btn  {
-    font-size: 0.8em;
-    padding: 6px 10px;
+  .user-name {
+    color: #ffc107;
+    font-weight: bolder;
   }
 }
+

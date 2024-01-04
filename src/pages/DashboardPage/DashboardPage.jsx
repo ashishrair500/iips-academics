@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Navbar from '../../components/DashboardComponents/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar';
 import SubBar from '../../components/DashboardComponents/SubBar/SubBar';
 import HomeComponent from '../../components/DashboardComponents/HomeComponent/HomeComponent';
 import CreateFolder from '../../components/DashboardComponents/CreateFolder/CreateFolder';
@@ -13,8 +13,8 @@ import CreateFile from '../../components/DashboardComponents/CreateFile/CreateFi
 import FileComponent from '../../components/DashboardComponents/FileComponent/FileComponent';
 import UploadFile from '../../components/DashboardComponents/UploadFile/UploadFile';
 import './DashboardPage.css';
-import './footer.css';
-import FooterComponent from '../../components/FooterComponent/Footer';
+
+import Footer from '../../components/Footer/Footer';
 const DashboardPage = () => {
   const [isCreateFolderOpen, setIsCreateFolderOpen] = useState(false);
   const [isCreateFileOpen, setIsCreateFileOpen] = useState(false);
@@ -94,7 +94,7 @@ const DashboardPage = () => {
         <Route path="file/:fileId" element={<FileComponent />} />
       </Routes>
 
-      <FooterComponent />
+      <Footer />
 
      
     </div>
@@ -102,3 +102,4 @@ const DashboardPage = () => {
 };
 
 export default DashboardPage;
+

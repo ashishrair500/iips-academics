@@ -1,23 +1,36 @@
 /* RegisterForm.css */
 
 .google-signin-btn {
-  background-color: rgb(204 244 255);
-  color: rgb(20 71 228);
+  background-color: black;
+  color: rgb(20, 71, 228);
   padding: 15px 20px; /* Adjust padding for a larger button size */
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 30px; /* Increase font size */
+  font-size: 2em; /* Increase font size for better responsiveness */
   font-weight: bold; /* Make the text bold */
   display: flex;
   align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Align items horizontally in the center */
 }
 
 .google-signin-btn:hover {
-  background-color: black; /* Darker Google Blue on hover */
+  background-color: white; /* Darker Google Blue on hover */
 }
 
 .google-icon img {
-  margin-right: 20px; /* Add some spacing between the text and the Google icon */
-  width: 100px; /* Set a fixed width for the Google icon image */
+  margin-right: 10px; /* Reduce spacing between the text and the Google icon */
+  width: 60px; /* Set a fixed width for the Google icon image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .google-signin-btn {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    padding: 12px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .google-icon img {
+    width: 40px; /* Adjust the width for smaller screens */
+  }
 }
