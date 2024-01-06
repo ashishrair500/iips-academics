@@ -4,6 +4,8 @@ import Navbar from '../../components/Navbar/Navbar';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
+ 
+
 import { shallowEqual } from 'react-redux';
 
 
