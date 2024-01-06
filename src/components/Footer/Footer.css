@@ -1,0 +1,77 @@
+/* footer.css */
+.shadow {
+  box-shadow: 
+    0 0 20px black, /* Greyish shadow */
+    0 0 30px black, /* Highlight at the top */
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  background: linear-gradient(to right, #0e1016, #343232);
+  padding: 10px; /* Adjust the padding value */
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: space-around;
+}
+
+.column {
+  flex: 1; /* Each column takes equal space */
+  max-width: 300px; /* Adjust the max-width as needed */
+  margin-top: 10px; /* Adjust the margin-top value for space between columns */
+}
+
+.footer ul {
+  list-style: none;
+  margin: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: Centers items within each column */
+}
+
+.footer li {
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.footer a {
+  background: linear-gradient(to right, #cfcfcf, #bfbfbf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.footer a:hover {
+  color: red;
+}
+
+.footer p {
+  color: #ffe3e3;
+  margin-top: 20px; /* Adjust the margin-top value for space between columns and bottom text */
+  font-size: 1.3em;
+  font-weight: bolder;
+  align-items: center;
+  font-style: italic;
+}
+
+.footer p:hover {
+  color: red;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .column {
+    max-width: 100%;
+  }
+}

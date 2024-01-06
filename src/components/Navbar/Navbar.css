@@ -1,0 +1,188 @@
+/* Navbar.css */
+
+
+/* Default styles */
+.navbar {
+  background: linear-gradient(to right, #5b5d5f, #092c4f);
+  padding: 10px 20px;
+  box-shadow: 0 0 20px black, 0 0 30px black, inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #fffb00;
+  margin-right: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  flex-direction: row !important; /* Ensure horizontal alignment */
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.nav-item {
+  display: inline-block !important; /* Ensure horizontal display */
+}
+.user-welcome {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bolder;
+  padding: 10px;
+  padding-top: 15px;
+  
+}
+
+.user-name {
+  color: #ffc107;
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+li img {
+  height: 25px;
+  width: auto;
+}
+
+.user-icon {
+  padding-left: 5px;
+  padding-bottom: 10px;
+  height: 40px;
+  width: auto;
+}
+.register-btn,.login-btn,
+.logout-btn {
+  color: white;
+  text-decoration: none;
+  padding: 8px 9px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.3s; /* Apply transition to all properties */
+  font-size: 1.7em; /* Increase font size */
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+
+   
+
+  /* Apply the shadow effect */
+  &:after,
+  &:hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #314f8d, #03363c);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  /* Apply the scale effect */
+  &:hover,
+  &:focus {
+    transform: scale(1.1); /* Increase size on hover or focus */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover or focus */
+  }
+}
+
+/* Add the animation for the glowing effect */
+ 
+.logout-btn {
+  
+  padding: 3px  10px;
+  margin-left: 16px;
+  font-weight: bold !important;
+  font-size: 1.3em !important;
+
+
+}
+.logout-btn:hover {
+  
+   font-weight: bold !important;
+}
+.register-btn img,.login-btn img{
+  padding-left: 5px;
+
+}
+.register-btn {
+  margin-right: -4px !important;
+}
+.login-btn {
+  margin-right: 0px !important;
+}
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Center the items */
+  }
+.navbar-brand {
+   
+    padding-left: 55px;
+  }
+  .navbar-link {
+    padding: 10px;
+    text-align: center;
+  }
+  li img {
+    
+    padding-left: 54px;
+}
+  .user-welcome {
+     font-size: 1em;
+  }
+  .user-name {
+    color: #ffc107;
+    font-weight: bolder;
+  }
+  .login-btn{
+    margin-top: 10px !important;
+    margin-left: 60px !important;
+  }
+  .register-btn{
+    margin-top: 10px !important;
+     
+  }
+  .logout-btn {
+     font-size: 1.3em !important;
+     margin-top: 10px;
+     margin-right:60px;
+     padding :0px 0px;
+}
+  .logout-btn img {
+     margin-right:50px
+}
+}
+

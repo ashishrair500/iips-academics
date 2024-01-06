@@ -1,8 +1,8 @@
 // DashboardPage.jsx
 import React, { useEffect, useState } from 'react';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
-import { useNavigate, useLocation } from 'react-router-dom';
-import Navbar from '../../components/DashboardComponents/Navbar/Navbar';
+import { useNavigate, useLocation ,Link} from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
 import SubBar from '../../components/DashboardComponents/SubBar/SubBar';
 import HomeComponent from '../../components/DashboardComponents/HomeComponent/HomeComponent';
 import CreateFolder from '../../components/DashboardComponents/CreateFolder/CreateFolder';
@@ -13,8 +13,8 @@ import CreateFile from '../../components/DashboardComponents/CreateFile/CreateFi
 import FileComponent from '../../components/DashboardComponents/FileComponent/FileComponent';
 import UploadFile from '../../components/DashboardComponents/UploadFile/UploadFile';
 import './DashboardPage.css';
-import './footer.css';
-import FooterComponent from '../../components/FooterComponent/Footer';
+
+import Footer from '../../components/Footer/Footer';
 const DashboardPage = () => {
   const [isCreateFolderOpen, setIsCreateFolderOpen] = useState(false);
   const [isCreateFileOpen, setIsCreateFileOpen] = useState(false);
@@ -22,11 +22,7 @@ const DashboardPage = () => {
   const [showSubBar, setShowSubBar] = useState(true);
 
   const { pathname } = useLocation();
-
-
-
-
-
+  const { isAuthenticated } = useSelector((state) => state.auth);
   const { isLoggedIn, isLoading, userId ,currentFolder} = useSelector(
     (state) => ({
       isLoggedIn: state.auth.isAuthenticated,
@@ -60,7 +56,11 @@ const DashboardPage = () => {
   }, [pathname]);
 
   return (
-    <div className='body-container'>
+
+    <div>
+    {isAuthenticated ? (
+
+      <div className='body-container'>
     {isCreateFolderOpen && <CreateFolder setIsCreateFolderOpen={setIsCreateFolderOpen} />}
       {isFileUploadOpen && <UploadFile setIsFileUploadOpen={setIsFileUploadOpen} />}
       {isCreateFileOpen && <CreateFile setIsCreateFileOpen={setIsCreateFileOpen} />}
@@ -76,7 +76,7 @@ const DashboardPage = () => {
         <p className='search-ins'>Please use Ctrl+F to search your subject</p>
               
           ) : (
-            <p className='search-ins'>Please use Ctrl+F to search your subject</p>
+            <p className='search-ins'>Please refresh after viewing/downloading notes. </p>
           )}
        
 
@@ -94,11 +94,19 @@ const DashboardPage = () => {
         <Route path="file/:fileId" element={<FileComponent />} />
       </Routes>
 
-      <FooterComponent />
+      <Footer />
 
      
+    </div>
+
+    ):(
+
+      <div>Login First</div>
+    )}
+    
     </div>
   );
 };
 
 export default DashboardPage;
+

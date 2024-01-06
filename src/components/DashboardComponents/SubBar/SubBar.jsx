@@ -28,36 +28,36 @@ const Subbar = ({
   };
 
   return (
-    <nav className="">
-      <nav className="ms-5" aria-label="breadcrumb">
+    <nav >
+      <nav className="breadcrumb-container" aria-label="breadcrumb">
         <ol className="breadcrumb  d-flex align-items-center">
           {currentFolder !== "root" ? (
             <>
               <button
-                className="breadcrumb-item btn btn-link  text-decoration-none"
+                className="breadcrumb-nav"
                 onClick={() => handleNavigate("/dashboard", "root")}
               >
-                Root
+                Root /
               </button>
               {currentFolderData?.data.path.map((folder, index) => (
                 <button
                   key={index}
-                  className="breadcrumb-item btn btn-link   text-decoration-none"
+                  className="breadcrumb-nav"
                   onClick={() =>
                     handleNavigate(
                       `/dashboard/folder/${userFolders.find((fldr) => folder === fldr.docId).docId}`,
                       userFolders.find((fldr) => folder === fldr.docId).docId)}
                 >
-                  {userFolders.find((fldr) => folder === fldr.docId).data.name}
+                  {userFolders.find((fldr) => folder === fldr.docId).data.name} /
                 </button>
               ))}
-              <li className="breadcrumb-item active">
-                {currentFolderData?.data.name}
+              <li className="breadcrumb-nav">
+                {currentFolderData?.data.name} 
               </li>
             </>
           ) : (
             <>
-              <li className="breadcrumb-item active">
+              <li className="breadcrumb-nav">
                
               </li>
             </>
@@ -65,9 +65,9 @@ const Subbar = ({
         </ol>
       </nav>
 
-      {user.uid === "T3XBsF3xtDMgTRQIi7xVQYqffpe2" ? (
+      {user.uid === "T3XBsF3xtDMgTRQIi7xVQYqffpe2" ||user.uid === "mpAHtp6Xooci6muNldHwOx1I8K53"  ? (
         <>
-          <ul className="navbar-nav ms-auto me-4">
+          <ul className="navbar-nav">
             <li className="nav-item mx-2">
               <button className="btn btn-outline-dark"
                 onClick={() => setIsFileUploadOpen(true)}
@@ -85,12 +85,7 @@ const Subbar = ({
         </>
       ) : (
         <ul className="navbar-nav ms-auto">
-          <li className="nav-item mx-2">
-         
-              
-             
-              
-          
+          <li className="nav-item mx-2"> 
           </li>
         </ul>
       )}

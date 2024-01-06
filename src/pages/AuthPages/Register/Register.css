@@ -28,22 +28,43 @@ body, html {
   font-size: 4em; /* Adjust the font size for the heading */
   font-weight: bolder;
   padding-bottom: 30px;
-
-  
   position: relative;
    
 }
+ 
+/* RegisterForm.css */
 
-.register-login-link {
-  background: linear-gradient(to right, #ff3232, #89b659); /* Gradient text color */
-  -webkit-background-clip: text; /* Clip the text to the background gradient */
-  background-clip: text; /* Define the standard property for compatibility */
-  color: transparent;
-  font-size: 2em; /* Adjust the font size for the link */
-  font-weight: bolder;
-  padding: 47px;
+.google-signup-btn {
+  background-color: black;
+  color: rgb(20, 71, 228);
+  padding: 15px 20px; /* Adjust padding for a larger button size */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2em; /* Increase font size for better responsiveness */
+  font-weight: bold; /* Make the text bold */
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Align items horizontally in the center */
 }
 
-.register-login-link:hover {
-  color: #fff;
+.google-signup-btn:hover {
+  background-color: white; /* Darker Google Blue on hover */
+}
+
+.google-icon img {
+  margin-right: 10px; /* Reduce spacing between the text and the Google icon */
+  width: 60px; /* Set a fixed width for the Google icon image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .google-signup-btn {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    padding: 12px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .google-icon img {
+    width: 40px; /* Adjust the width for smaller screens */
+  }
 }

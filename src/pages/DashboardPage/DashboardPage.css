@@ -1,51 +1,57 @@
-.line-break{
-  
-    border-top: 1px solid rgb(176, 175, 175);
-    
-    
+/* DashboardPage.css */
+
+ 
+.search-ins {
+  text-align: center;
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: colorTransition 10s linear infinite;
+  font-style: italic;
 }
 
 .contribute-button {
   background: linear-gradient(to right, #373b44, #2f3031);
-    border: none;
-    color: rgb(251, 73, 73); /* Text color set to white */
-    font-size: 20px; /* Increased text size */
-     
-   display: flex;
-    justify-content: center;
+  border: none;
+  color: rgb(251, 73, 73);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
   
-    transition: all 0.3s ease-in-out;
-    white-space: nowrap;
-    text-decoration:underline;
-    padding-top: 18px;
+  white-space: nowrap;
+  text-decoration: underline;
+  padding-top: 18px;
+  margin-bottom: 20px;
+}
+a.contribute-button:hover {
+  color: seashell;
+  cursor: pointer;
+}
 
+@media screen and (max-width: 768px) {
+  .contribute-button {
+    font-size: 16px;
   }
-  .search-ins {
-    text-align: center;
-    color: black; /* Initial color */
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 20px; /* Adjust as needed */
-    animation: colorTransition 10s linear infinite; /* Adjust animation duration as needed */
-    font-style: italic;
+}
+
+/* Additional styling for the line break */
+.line-break {
+  border-top: 1px solid rgb(176, 175, 175);
+}
+
+/* Animation for color transition */
+@keyframes colorTransition {
+  0% {
+    color: red;
   }
-  
-  @keyframes colorTransition {
-    0% {
-      color: red;
-    }
-    50% {
-      color: white;
-    }
-    75% {
-      color: red;
-    }
-    100% {
-      color: white;
-    }
+  50% {
+    color: white;
   }
-  .contribute-button:hover {
-    color: rgb(251, 73, 73);
-    transform: scale(1.5);
-    box-shadow: 0 0 20px rgb(251, 73, 73);
+  75% {
+    color: red;
   }
+  100% {
+    color: white;
+  }
+}

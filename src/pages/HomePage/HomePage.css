@@ -6,6 +6,7 @@ body, html {
   height: 100%;
   font-size: 16px;
   background: linear-gradient(to right, #373b44, #2f3031);
+  overflow-x: hidden;
 }
 .line-break{
   margin-top: 10px;
@@ -54,7 +55,7 @@ body, html {
   padding-bottom: 34px;
   margin-top: 7px;
 }
-/* HomePage.css (Only the relevant part) */
+
 
 .content-below-line {
   display: flex;
@@ -86,13 +87,13 @@ body, html {
     0 0 30px black, /* Greyish shadow */
     0 0 50px black, /* Highlight at the top */
     inset 0 0 20px rgba(0, 0, 0, 0.5); /* Darker shade inside the box */
-
-
-
-  transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
- 
+ .logo-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+ }
 .home-para{
   /* background: linear-gradient(to right, #ffffff, #f39c12); */
   -webkit-background-clip: text;
@@ -101,7 +102,7 @@ body, html {
   font-size: 1.5em;
   font-family: "Brush Script MT", cursive;
  
-   font-weight:  normal;
+   font-weight:100;
     
    padding-left: 100px;
    padding-right: 100px;
@@ -175,25 +176,28 @@ color:white;
 .carousel {
   margin-top: 57px;
   display: flex;
-  overflow: auto;
+  overflow: hidden; /* Add overflow: hidden; to prevent scrollbars */
   width: 100%;
   height: 250px;
-  /* animation: scroll 20s linear infinite;  */
-  
 }
 
 .carousel img {
   width: auto;
-  
   margin-right: 10px;
   border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
 }
+
+.carousel img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .iips-linkedin{
    
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
-  
   margin-top: 70px; 
   margin-bottom: 20px;
   font-size: 1.5em;
@@ -216,25 +220,73 @@ color:white;
   }
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-  .home-heading {
-    font-size: 2.5em;
+  body, html {
+  overflow-x: hidden;
+  }
+  .content-below-line {
+    flex-direction: column;
+     
   }
 
-  .carousel {
-    height: 150px;
+  .text-container {
+    margin-right: 0;
+    padding-right: 0;
+    width: 47%;
+  }
+
+  .image-container {
+    margin-top: 20px; /* Add some space between text and image on smaller screens */
+  }
+
+  .logo-image {
+    
+
+    height: auto;
+    max-width: 29%;
+  }
+  .home-para {
+     display: block;
+  }
+  .home-para h1 {
+     
+    padding-left: 51px !important; /* Adjust the padding for smaller screens */
+  }
+   
+  .glow-on-hover {
+    width: 100%; /* Make the button full width on smaller screens */
+  }
+.home-content{
+  
+  padding-top: 29px;
+}
+.carousel {
+  flex-direction: column; /* Stack images vertically */
+  align-items: center; /* Center align images */
+  height: auto; /* Adjust height as needed */
+}
+
+.carousel img {
+  width: 300px; /* Make images fill the entire width of the container */
+  margin-right: 0; /* Remove right margin to prevent extra space */
+  margin-bottom: 10px; /* Add bottom margin to separate images vertically */
+}
+
+  .iips-linkedin{
+   
+    margin-left: 5px;
+    margin-top: 28px; 
+    margin-bottom: 30px;
+    padding-left: 30px;
+    
+    
+  }
+  .iips-linkedin img{
+    margin-right: 4em;
+    margin-top: 41px;
+    
+    
   }
 }
 
-@media (max-width: 576px) {
-  .home-heading {
-    font-size: 2em;
-  }
-
-  .carousel {
-    height: 100px;
-  }
-}
-
-/* Add more media queries as needed for smaller devices */
+ 

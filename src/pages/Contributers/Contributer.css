@@ -1,3 +1,73 @@
-.h2{
-    color: white;
+/* Contributer.css */
+
+/* Default styles */
+.contributor-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.contributor-heading {
+  color: #ffc107;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contributors-table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 40px;
+  /* Adjusted gradient for better visibility */
+}
+
+.contributors-table th,
+.contributors-table td {
+  border: 3px solid #73b9dc; /* Adjusted border color for better contrast */
+  color: #e1f9ed; /* Adjusted text color for better readability */
+  padding: 10px;
+  font-weight: bold;
+}
+
+.contributors-table td {
+  font-size: 20px;
+}
+
+.contributors-table th {
+  font-size: 30px;
+}
+
+.thank-you-note {
+  margin-top: 20px;
+  color: #ffc107;
+}
+
+.thank-you-note p {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .contributors-table {
+    width: 100%; /* Adjusted width for smaller screens */
+  }
+
+  .contributors-table th,
+  .contributors-table td {
+    padding: 8px; /* Adjusted padding for smaller screens */
+  }
+
+  .contributors-table th {
+    font-size: 20px; /* Adjusted font size for smaller screens */
+  }
+
+  .thank-you-note {
+    margin-top: 10px; /* Adjusted margin for smaller screens */
+  }
+
+  .thank-you-note p {
+    font-size: 1.5em; /* Adjusted font size for smaller screens */
+  }
 }

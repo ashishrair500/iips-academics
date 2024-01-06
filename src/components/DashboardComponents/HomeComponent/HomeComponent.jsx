@@ -24,7 +24,7 @@ const HomeComponent = () => {
  
     {
       isLoading ? (
-        <h1 className="display-1 my-5 text-center text-info">Loading...</h1>
+        <h1 className="display-1 my-5 text-center text-info"> Please wait Loading...</h1>
         
          ):( 
 

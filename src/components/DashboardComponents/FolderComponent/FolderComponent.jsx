@@ -55,7 +55,7 @@ const FolderComponent = () => {
         </>
       ) :
         (
-          <p className="text-center my-5"> Empty Folder</p>
+          <p className="text-center my-5 color-white"> Notes will be updated Soon...</p>
         )
 
 
