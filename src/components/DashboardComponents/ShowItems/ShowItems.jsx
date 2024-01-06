@@ -21,7 +21,7 @@ const ShowItems = ({ title, items, type }) => {
 
   return (
     <div className='show-items'>
-      {/* <h1 className='text-center'>{title}</h1> */}
+      
       <div className="items-container">
         {items.map((item, index) => (
           <div
@@ -32,8 +32,7 @@ const ShowItems = ({ title, items, type }) => {
            
  
             <img src={type === 'file' ? "../../../../public/assets/file-icon.png" : "../../../../public/assets/folder-icon.png"} alt={type === 'file' ? "File Icon" : "Folder Icon"} />
- 
- 
+
             <span>{item.data?.name}</span>
           </div>
         ))}

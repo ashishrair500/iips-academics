@@ -1,12 +1,15 @@
 
 .center-div{
-    margin: 0 auto;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-    
-    border-radius: 10px;
-     
+    text-align: center;     
+}
+
+.center-div>h4{
+  padding-bottom: 20px;  
+  color: whitesmoke; 
+   
+}
+.phone-msg{
+  display: none;
 }
 .glow-on-hover {
     
@@ -66,4 +69,19 @@
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+.bottom-space{
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .center-div>h4{
+    display: none;
+     
+  }
+  .phone-msg{
+    display: block !important;
+    padding-bottom: 20px;  
+    color: whitesmoke; 
+  }
 }

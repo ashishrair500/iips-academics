@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, shallowEqual } from 'react-redux';
-import Header from './Header';
-import CodeEditor from './CodeEditor';
+
 import './FileComponent.css';
 
 const FileComponent = () => {
@@ -34,10 +33,12 @@ const FileComponent = () => {
     const link = document.createElement('a');
     link.href = currentFile?.data.url;
     link.target = '_blank';
+    link.rel = 'noopener noreferrer'; // Added for security reasons
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+  
 
   useEffect(() => {
     // Trigger the downloadFile function when the component mounts
@@ -46,35 +47,21 @@ const FileComponent = () => {
 
   if (isAuthenticated) {
     return (
-      <div>
-        {isAuthenticated && fileData !== null ? (
-          <>
-            <Header fileName={currentFile?.data.name} fileId={fileId} />
-            <CodeEditor fileName={currentFile?.data.name} data={fileData} setData={setFileData} />
-          </>
-        ) : (
-          <div >
-            {/* Sub Menu Bar */}
-            <div className=' '>
-              <p
-                title={currentFile?.data.name}
-                className='my-0'
-                style={{ cursor: 'pointer' }}
-              >
-                {currentFile?.data.name.length > 40
-                  ? currentFile?.data.name.slice(0, 40) + '... .' + currentFile?.data.extention
-                  : currentFile?.data.name}
-              </p>
+       
               <div className='center-div'>
-                <button className='glow-on-hover' onClick={() => navigate(-3)}>
-                  Go Back
+               
+               <h4 >File Opened in New Tab</h4>
+              <h4  className='phone-msg'>File is Downloaded</h4>
+             
+                <button className='glow-on-hover bottom-space' onClick={() => navigate("/dashboard")}>
+                  Go Back ! 😎
                 </button>
-                {/* The download button is automatically triggered by the useEffect hook */}
-              </div>
+                
+            
             </div>
-          </div>
-        )}
-      </div>
+          
+        
+      
     );
   }
 

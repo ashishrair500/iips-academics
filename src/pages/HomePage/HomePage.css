@@ -87,13 +87,13 @@ body, html {
     0 0 30px black, /* Greyish shadow */
     0 0 50px black, /* Highlight at the top */
     inset 0 0 20px rgba(0, 0, 0, 0.5); /* Darker shade inside the box */
-
-
-
-  transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
- 
+ .logo-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+ }
 .home-para{
   /* background: linear-gradient(to right, #ffffff, #f39c12); */
   -webkit-background-clip: text;
@@ -102,7 +102,7 @@ body, html {
   font-size: 1.5em;
   font-family: "Brush Script MT", cursive;
  
-   font-weight:  normal;
+   font-weight:100;
     
    padding-left: 100px;
    padding-right: 100px;
