@@ -77,6 +77,7 @@ const DashboardPage = () => {
               
           ) : (
  
+ 
             <p className='search-ins'>Use Sub Bar for Navigation</p>
  
           )}

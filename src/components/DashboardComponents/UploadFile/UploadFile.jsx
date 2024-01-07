@@ -1,5 +1,3 @@
-// UploadFile.jsx
-
 import { useEffect, useState } from 'react';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +8,6 @@ import './UploadFile.css';
 
 const UploadFile = ({ setIsFileUploadOpen }) => {
   const [file, setFile] = useState(null);
-  const [success, setSuccess] = useState(false);
   const dispatch = useDispatch();
 
   const { userFiles, user, currentFolder, currentFolderData } = useSelector(
@@ -23,14 +20,6 @@ const UploadFile = ({ setIsFileUploadOpen }) => {
     shallowEqual
   );
 
-  useEffect(() => {
-    if (success) {
-      setIsFileUploadOpen(false);
-      setFile(null);
-      setSuccess(false);
-    }
-  }, [success]);
-
   const checkFileAlreadyPresent = (name) => {
     const filePresent = userFiles
       .filter((file) => file.data.parent === currentFolder)
@@ -39,31 +28,43 @@ const UploadFile = ({ setIsFileUploadOpen }) => {
     return filePresent ? true : false;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (file) {
-      if (!checkFileAlreadyPresent(file.name)) {
-        const data = {
-          createdAt: new Date(),
-          name: file.name,
-          userId: user.uid,
-          createdBy: user.displayName,
-          path: currentFolder === 'root' ? [] : [...currentFolderData?.data.path, currentFolder],
-          parent: currentFolder,
-          lastAccessed: null,
-          updatedAt: new Date(),
-          extension: file.name.split('.')[1],
-          data: null,
-          url: '',
-        };
+    try {
+      if (file) {
+        if (!checkFileAlreadyPresent(file.name)) {
+          const data = {
+            createdAt: new Date(),
+            name: file.name,
+            userId: user.uid,
+            createdBy: user.displayName,
+            path: currentFolder === 'root' ? [] : [...currentFolderData?.data.path, currentFolder],
+            parent: currentFolder,
+            lastAccessed: null,
+            updatedAt: new Date(),
+            extension: file.name.split('.')[1],
+            data: null,
+            url: '',
+          };
 
-        dispatch(uploadFile(file, data, setSuccess));
+          // Use the async/await pattern to wait for the file upload process
+          await dispatch(uploadFile(file, data));
+
+          // Reset the file state after successful upload
+          setFile(null);
+
+          // Close the modal or perform any other actions on success
+          setIsFileUploadOpen(false);
+        } else {
+          toast.error('File already present');
+        }
       } else {
-        toast.error('File already present');
+        toast.error('File name is required');
       }
-    } else {
-      toast.error('File name is required');
+    } catch (error) {
+      console.error('Error uploading file:', error);
+      toast.error('Error uploading file');
     }
   };
 
@@ -73,6 +74,7 @@ const UploadFile = ({ setIsFileUploadOpen }) => {
         <div className='col-md-4 mt-5 upload-file-content'>
           <div className='upload-file-header'>
             <h4>Upload File</h4>
+            <div>Please see file upload progress in console.</div>
             <button className='upload-file-close-btn' onClick={() => setIsFileUploadOpen(false)}>
               <FontAwesomeIcon icon={faTimes} className='text-black' size='sm' />
             </button>

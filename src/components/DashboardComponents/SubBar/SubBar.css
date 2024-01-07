@@ -18,7 +18,16 @@
 .breadcrumb-nav:hover {
   color: #ffc107;
 }
-
+.breadcrumb-current-folder{
+  background: linear-gradient(to right, #373b44, #2f3031);
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: whitesmoke;
+  
+  font-size: large;
+  padding-left: 10px;
+}
 .navbar-nav {
   display: flex;
   justify-content: center;
