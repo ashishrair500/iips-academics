@@ -1,51 +1,26 @@
-// HomeComponent.jsx
 import React from 'react';
 import ShowItems from "../ShowItems/ShowItems";
-import { useSelector, shallowEqual } from "react-redux";
-import './HomeComponent.css'; // Import the newly created CSS file
+import { shallowEqual, useSelector } from "react-redux";
+import { selectHomeComponentData } from "./selectors"; // Update the path
+
+import './HomeComponent.css';
 
 const HomeComponent = () => {
+  // Use the selector to get the data for HomeComponent
   const { isLoading, userFolders, userFiles, currentFolder } = useSelector(
-    (state) => ({
-      isLoading: state.filefolders.isLoading,
-      userFolders: state.filefolders.userFolders.filter(
-        (folder) => folder.data.parent === "root"
-      ),
-      userFiles: state.filefolders.userFiles.filter(
-        (file) => file.data.parent === "root"
-      ),
-      currentFolder: state.filefolders.currentFolder,
-    }),
+    selectHomeComponentData,
     shallowEqual
   );
 
   return (
     <div className="col-md-12 w-100">
- 
-    {
-      isLoading ? (
+      {isLoading ? (
         <h1 className="display-1 my-5 text-center text-info"> Please wait Loading...</h1>
-        
-         ):( 
-
+      ) : (
         <>
-          <ShowItems
-            title={"Choose Course"}
-            type={"folder"}
-            items={userFolders}
-          />
-          {/* Commenting out this section because it's not needed */}
-          {/* <ShowItems
-            title={"Created Files"}
-            type={"file"}
-            items={userFiles.filter((file) => file.data.url === null)}
-            />*/}
+          <ShowItems title={"Choose Course"} type={"folder"} items={userFolders} />
           {currentFolder !== "root" ? (
-            <ShowItems
-              title={"Notes"}
-              type={"file"}
-              items={userFiles.filter((file) => file.data.data === null)}
-            />
+            <ShowItems title={"Notes"} type={"file"} items={userFiles.filter((file) => file.data.data === null)} />
           ) : (
             <h1></h1>
           )}

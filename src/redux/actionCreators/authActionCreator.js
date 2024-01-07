@@ -1,7 +1,7 @@
 // what to do
 
 import * as types from "../actionsTypes/authActionTypes"
-import fire from "../../config/firebase"
+import {fire} from "../../config/firebase"
 import { toast } from "react-toastify";
 
 /*

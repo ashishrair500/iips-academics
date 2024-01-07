@@ -19,9 +19,10 @@
   
   .upload-file-header {
     display: flex;
-    justify-content: space-between;
+     
     align-items: center;
   }
+  
   
   .upload-file-close-btn {
     background: none;

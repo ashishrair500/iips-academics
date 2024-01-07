@@ -4,7 +4,7 @@ Reducer: Reducers are the functions that take the current state and an action as
 */
 
 import * as types from "../actionsTypes/fileFoldersActionTypes"
-
+import { DELETE_FILE } from '../actionsTypes/fileFoldersActionTypes';
 const initialState = {  
     // initial state  
   isLoading : true,
@@ -51,6 +51,14 @@ const fileFoldersReducer = (state = initialState, action) => {
                 ...state,
                 userFiles : [...state.userFiles, action.payload]
             };
+            case DELETE_FILE:
+                const fileIdToDelete = action.payload.fileId;
+                // Update your state to remove the file with fileIdToDelete
+                // This will depend on your current state structure
+                return {
+                  ...state,
+                  userFiles: state.userFiles.filter(file => file.docId !== fileIdToDelete),
+                };
         case types.SET_FILE_DATA:
          const {fileId , data} = action.payload;
          const allFiles = [...state.userFiles];

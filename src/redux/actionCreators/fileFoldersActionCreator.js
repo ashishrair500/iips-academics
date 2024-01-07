@@ -1,6 +1,8 @@
 import * as types from "../actionsTypes/fileFoldersActionTypes"
-import fire from "../../config/firebase"
+import {fire} from "../../config/firebase"
 import { toast } from "react-toastify";
+import { DELETE_FILE } from '../actionsTypes/fileFoldersActionTypes';
+import { db, storage } from '../..//config/firebase'; 
 
 /*
 Action:- Actions are the plain Javascript objects that have a type field. Actions only tell what to do , but they don't tell how to do
@@ -185,10 +187,50 @@ export const uploadFile =(file,data,setSuccess) =>(dispatch) => {
     setSuccess(true)
 }).catch((err)=>{
     console.log(err)
-    setSuccess(false)
+     
 }
 )}
 
 )
 
+
 }
+
+export const deleteFile = (fileId) => async (dispatch, getState) => {
+    try {
+      const state = getState();
+      const userId = state.auth.user.uid;
+  
+      // Log the userId and fileId for debugging
+      console.log('UserId:', userId);
+      console.log('FileId:', fileId);
+  
+      // Get the file reference from Firestore
+      const fileRef = db.collection('users').doc(userId).collection('files').doc(fileId);
+  
+      // Log the Firestore document data for debugging
+      const fileDoc = await fileRef.get();
+      console.log('Firestore Document Data:', fileDoc.data());
+  
+      // Delete the file data from Firestore
+      await fileRef.delete();
+  
+      // Delete the file from Firebase Storage
+      const storageRef = storage.ref(`files/${userId}/${fileId}`);
+      console.log('Storage Reference Path:', storageRef.fullPath);
+      await storageRef.delete();
+  
+      // Dispatch an action to update the UI (you need to implement this action)
+      dispatch(fileDeleted(fileId));
+    } catch (error) {
+      console.error('Error deleting file:', error.message);
+      // You can dispatch an action here to handle errors or show a notification
+    }
+  };
+  
+  // Action to update the UI after file deletion
+  const fileDeleted = (fileId) => ({
+    type: 'FILE_DELETED',
+    payload: { fileId },
+  });
+  
