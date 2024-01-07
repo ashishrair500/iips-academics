@@ -76,7 +76,9 @@ const DashboardPage = () => {
         <p className='search-ins'>Please use Ctrl+F to search your subject</p>
               
           ) : (
+ 
             <p className='search-ins'>Use Sub Bar for Navigation</p>
+ 
           )}
        
 
