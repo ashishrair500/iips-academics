@@ -76,17 +76,19 @@ const DashboardPage = () => {
         <p className='search-ins'>Please use Ctrl+F to search your subject</p>
               
           ) : (
-            <p className='search-ins'>Please refresh after viewing/downloading notes. </p>
+ 
+            <p className='search-ins'>Use Sub Bar for Navigation</p>
+ 
           )}
        
 
-      {showSubBar && (
+      
         <SubBar
           setIsCreateFolderOpen={setIsCreateFolderOpen}
           setIsCreateFileOpen={setIsCreateFileOpen}
           setIsFileUploadOpen={setIsFileUploadOpen}
         />
-      )}
+      
 
       <Routes>
         <Route path="" element={<HomeComponent />} />
