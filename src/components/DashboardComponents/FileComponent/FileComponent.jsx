@@ -45,6 +45,7 @@ const FileComponent = () => {
   };
 
   const handleDeleteFile = () => {
+
     const fileId = currentFile.docId;
     const fileName = currentFile.data.name;
     console.log('CurrentFile Data:', currentFile.data); // Log the currentFile data
@@ -56,6 +57,7 @@ const FileComponent = () => {
   };
   
   
+ 
 
   useEffect(() => {
     downloadFile();
@@ -66,9 +68,11 @@ const FileComponent = () => {
       {user.uid === "T3XBsF3xtDMgTRQIi7xVQYqffpe2" ? (<div className='center-div'>
       <h4 >File Opened in New Tab</h4>
       <h4 className='phone-msg'>File is Downloaded</h4>
+
         <button className='glow-on-hover bottom-space' onClick={handleDeleteFile}>
           Delete File 🗑️
         </button>
+ 
 
 
       </div>) : (

@@ -74,7 +74,8 @@ const UploadFile = ({ setIsFileUploadOpen }) => {
         <div className='col-md-4 mt-5 upload-file-content'>
           <div className='upload-file-header'>
             <h4>Upload File</h4>
-            
+ 
+
             <button className='upload-file-close-btn' onClick={() => setIsFileUploadOpen(false)}>
               <FontAwesomeIcon icon={faTimes} className='text-black' size='sm' />
             </button>

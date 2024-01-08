@@ -39,7 +39,7 @@ export const signInUser = (email,password,setSuccess) =>(dispatch)=>{
        dispatch(loginUser({
         uid:user.user.uid,
 
-/* yaha pr me apni id ko hard code kr dunga mtlab jab bhi koi user signUp karga tab firebase promise me user id return karta hai jis id ki hep se user apne files and folders ko access karta hai.lekin me yaha pr apni matlab admin ki user id ko hard code kr dunga taki jo files nad folder admin ke hai usse koi bhi user access kar sake;
+/* yaha pr me apni id ko hard code kr dunga mtlab jab bhi koi user signUp karga tab firebase promise me user id return karta hai jis id ki hep se user apne files and folders ko access karta hai.lekin me yaha pr apni matlab admin ki user id ko hard code kr dunga taki jo files and folder admin ke hai usse koi bhi user access kar sake;
                 create folder ,upload file , create file button ko disable kr denge ta jab userid !==admin id
                 */
 
