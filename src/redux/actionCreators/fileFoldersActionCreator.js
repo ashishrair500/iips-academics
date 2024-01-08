@@ -1,8 +1,9 @@
 import * as types from "../actionsTypes/fileFoldersActionTypes"
-import { fire } from "../../config/firebase"
+
+import {fire} from "../../config/firebase"
 import { toast } from "react-toastify";
-import { DELETE_FILE } from '../actionsTypes/fileFoldersActionTypes';
-import { db, storage } from '../..//config/firebase';
+import { db, storage } from '../../config/firebase'; 
+ 
 
 /*
 Action:- Actions are the plain Javascript objects that have a type field. Actions only tell what to do , but they don't tell how to do
@@ -57,29 +58,29 @@ const setFileData = (payload) => ({
 });
 
 
-// Action to update the UI after file deletion
-const fileDeleted = (fileId) => ({
-    type: 'FILE_DELETED',
-    payload: { fileId },
-});
-
+const fileDeleted = (payload) => ({
+    type: types.DELETE_FILE,
+    payload,
+  });
+  
+ 
 //action Creators
 /*Action Creator : Pure function which creates an action. Reusable , Portable and Easy to Test
 */
 //------------------------------------------------------action---creator-----1----------------------------------------------------------------------------------
+export const createFolder = (data) =>(dispatch) => {
+      fire
+      .firestore()
+      .collection('folders')
+      .add(data)
+      .then(async (folder)=>{
+        const folderData =  await (await folder.get()).data();
+        const folderId = folder.id;
+        dispatch(addFolder({data : folderData , docId : folderId}));
+        
 
-export const createFolder = (data) => (dispatch) => {
-    fire
-        .firestore()
-        .collection('folders')
-        .add(data)
-        .then(async (folder) => {
-            const folderData = await (await folder.get()).data();
-            const folderId = folder.id;
-            dispatch(addFolder({ data: folderData, docId: folderId }));
-            alert('Folder created successfully')
-
-        })
+      })
+ 
 }
 
 //----------------------------------------------------------------action--creator--2---------------------------------------------------------------------------
@@ -140,21 +141,18 @@ export const getFiles = (userId) => (dispatch) => {
 
 export const createFile = (data, setSuccess) => (dispatch) => {
 
-    fire
-        .firestore()
-        .collection('files')
-        .add(data)
-        .then(async (file) => {
-            const fileData = await (await file.get()).data();
-            const fileId = file.id;
-            dispatch(addFile({ data: fileData, docId: fileId }));
-            setSuccess(true)
-            alert('File created successfully')
+    fire.firestore().collection('files').add(data).then(async (file)=>{
+      const fileData =  await (await file.get()).data();
+      const fileId = file.id;
+      dispatch(addFile({data : fileData , docId : fileId}));
+      setSuccess(true)
+      toast.success('File created successfully')
 
-        }).catch((err) => {
-            console.log(err)
-            setSuccess(false)
-        })
+    }).catch((err)=>{
+        console.log(err)
+        setSuccess(false)
+    })
+ 
 }
 
 export const updateFileData = (fileId, data) => (dispatch) => {
@@ -176,33 +174,28 @@ export const updateFileData = (fileId, data) => (dispatch) => {
 export const uploadFile = (file, data, setSuccess) => (dispatch) => {
 
     const uploadFileRef = fire.storage().ref(`files/${data.userId}/${data.name}`);
-    uploadFileRef.put(file).on('state_changed', (snapshot) => {
 
-        const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-        console.log("uploading " + progress + "% done");
+        uploadFileRef.put(file).on('state_changed', (snapshot) => {
 
-
-    }, (err) => {
-        console.log(err)
-    }, async () => {
-        const fileUrl = await uploadFileRef.getDownloadURL();
-        const fileData = { ...data, url: fileUrl };
-        fire.firestore().collection('files').add(fileData).then(async (file) => {
-            const fileData = await (await file.get()).data();
-            const fileId = file.id;
-            dispatch(addFile({ data: fileData, docId: fileId }));
-            toast.success('File uploaded successfully')
-            setSuccess(true)
-        }).catch((err) => {
-            console.log(err)
-
-        }
-        )
-    }
-
-    )
+            const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+         toast.success("uploading " + progress + "% done");
 
 
+}, (err) => {
+    console.log(err)
+}, async () => {
+    const fileUrl = await uploadFileRef.getDownloadURL();
+   const fileData = { ...data, url: fileUrl };
+   fire.firestore().collection('files').add(fileData).then(async (file)=>{
+    const fileData =  await (await file.get()).data();
+    const fileId = file.id;
+    dispatch(addFile({data : fileData , docId : fileId}));
+    toast.success('File uploaded successfully')
+    setSuccess(true)
+}).catch((err)=>{
+    console.log(err)
+     
+ 
 }
 
 export const deleteFile = (fileId) => async (dispatch, getState) => {
@@ -241,4 +234,39 @@ export const deleteFile = (fileId) => async (dispatch, getState) => {
         // You can dispatch an action here to handle errors or show a notification
     }
 };
+
+}
+
+
+export const deleteFile = (fileId, fileName) => async (dispatch, getState) => {
+    try {
+      const state = getState();
+      const userId = state.auth.user.uid;
+  
+      // Log the userId, fileId, and fileName for debugging
+      console.log('UserId:', userId);
+      console.log('FileId:', fileId);
+      console.log('FileName:', fileName);
+  
+      // Delete the file data from Firestore
+      const fileRef = db.collection('users').doc(userId).collection('files').doc(fileId);
+      await fileRef.delete();
+      console.log('Firestore Document Deleted:', fileId);
+  
+      // Delete the file from Firebase Storage using the fileName
+      const storageRef = storage.ref(`files/${userId}/${fileName}`);
+      console.log('Storage Reference Path:', storageRef.fullPath);
+      await storageRef.delete();
+      console.log('File deleted from Storage:', fileName);
+  
+      // Dispatch an action to update the UI (you need to implement this action)
+      dispatch(fileDeleted(fileId));
+      toast.success('File deleted successfully! Please refresh the page to see the changes');
+    } catch (error) {
+      console.error('Error deleting file:', error.message);
+      // You can dispatch an action here to handle errors or show a notification
+    }
+  };
+  
+  // Action to update the UI after file deletion
 

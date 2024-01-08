@@ -33,7 +33,7 @@ const CreateFolder = ({ setIsCreateFolderOpen }) => {
     return folderPresent ? true : false;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (folderName) {
@@ -50,7 +50,15 @@ const CreateFolder = ({ setIsCreateFolderOpen }) => {
             updatedAt: new Date(),
           };
 
-          dispatch(createFolder(data));
+          try {
+            await dispatch(createFolder(data));
+            setFolderName(''); // Clear the input field on success
+            toast.success('Folder created successfully');
+            setIsCreateFolderOpen(false); // Close the folder creation box
+          } catch (error) {
+            console.error('Error creating folder:', error.message);
+            toast.error('Folder creation failed');
+          }
         } else {
           toast.error('Folder already present');
         }

@@ -45,12 +45,19 @@ const FileComponent = () => {
   };
 
   const handleDeleteFile = () => {
-    // Dispatch the action to delete the file
-    dispatch(deleteFile(fileId));
 
-    // Navigate to the dashboard or any other desired page after deletion
+    const fileId = currentFile.docId;
+    const fileName = currentFile.data.name;
+    console.log('CurrentFile Data:', currentFile.data); // Log the currentFile data
+    console.log('FileId:', fileId);
+    console.log('FileName:', fileName);
+  
+    dispatch(deleteFile(fileId, fileName));
     navigate(-1);
   };
+  
+  
+ 
 
   useEffect(() => {
     downloadFile();
@@ -61,9 +68,11 @@ const FileComponent = () => {
       {user.uid === "T3XBsF3xtDMgTRQIi7xVQYqffpe2" ? (<div className='center-div'>
       <h4 >File Opened in New Tab</h4>
       <h4 className='phone-msg'>File is Downloaded</h4>
-        {/* <button className='glow-on-hover bottom-space' onClick={handleDeleteFile}>
+
+        <button className='glow-on-hover bottom-space' onClick={handleDeleteFile}>
           Delete File 🗑️
-        </button> */}
+        </button>
+ 
 
 
       </div>) : (
