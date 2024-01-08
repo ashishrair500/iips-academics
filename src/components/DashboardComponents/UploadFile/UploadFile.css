@@ -25,6 +25,7 @@
   
   
   .upload-file-close-btn {
+    margin-left: auto;
     background: none;
     border: none;
     cursor: pointer;

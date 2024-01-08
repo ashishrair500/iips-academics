@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import LoginForm from '../../../components/AuthComponents/LoginForm';
+import { toast } from 'react-toastify';
 import './Login.css'; // Import your styles
 const LoginPage = () => {
   const [success, setSuccess] = React.useState(false);
@@ -13,7 +14,8 @@ const LoginPage = () => {
       const provider = new firebase.auth.GoogleAuthProvider();
       const result = await firebase.auth().signInWithPopup(provider);
       const user = result.user;
-      alert("Welcome " + user.displayName + " !");
+      toast.success(`Welcome ${user.displayName}`);
+      
       console.log('Google Sign-In Successful:', user.displayName);
       // Redirect to the dashboard page
       navigate('/dashboard');

@@ -50,7 +50,7 @@ const HomePage = () => {
                 <img
 
                   src="../../../public/assets/iips-logo.png"
-
+                  loading="lazy"
                   alt="IIPS Logo"
                   className='logo-image'
                 />
@@ -63,10 +63,10 @@ const HomePage = () => {
             <div className='carousel'>
             
 
-              <img src="../../../public/assets/1_iips.jpg" alt="IIPS" />
-              <img src="../../../public/assets/2_iips_meme.jpg" alt="IIPS" />
-              <img src="../../../public/assets/3_iips-hostel.jpg" alt="IIPS" />
-              <img src="../../../public/assets/4_iips.jpg" alt="IIPS" />
+              <img src="../../../public/assets/1_iips.jpg" alt="IIPS" loading="lazy" />
+              <img src="../../../public/assets/2_iips_meme.jpg" alt="IIPS" loading="lazy" />
+              <img src="../../../public/assets/3_iips-hostel.jpg" alt="IIPS" loading="lazy" />
+              <img src="../../../public/assets/4_iips.jpg" alt="IIPS" loading="lazy" />
 
             </div>
           </div>
@@ -75,7 +75,7 @@ const HomePage = () => {
       <a href="https://www.linkedin.com/school/iips-davv/" target="_blank" className='iips-linkedin'
       >@International Institute of Professional Studies
 
-        <img src="../../../public/assets/linkedin-logo.jpg" ></img>
+        <img src="../../../public/assets/linkedin-logo.jpg"loading="lazy" ></img>
 
       </a>
 

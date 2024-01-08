@@ -22,6 +22,7 @@ const handleSubmit= (e) =>{
 };
 React.useEffect(()=>{
   if(success){
+    toast.success("Login Successful !")
       navigate("/dashboard")
   }
 },[success])
