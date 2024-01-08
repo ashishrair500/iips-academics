@@ -51,7 +51,7 @@ const fileFoldersReducer = (state = initialState, action) => {
                 ...state,
                 userFiles : [...state.userFiles, action.payload]
             };
-            case DELETE_FILE:
+        case DELETE_FILE:
                 const fileIdToDelete = action.payload.fileId;
                 // Update your state to remove the file with fileIdToDelete
                 // This will depend on your current state structure
