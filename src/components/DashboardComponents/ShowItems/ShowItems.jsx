@@ -10,7 +10,7 @@ const ShowItems = ({ title, items, type }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleDoubleClick = (itemId) => {
+  const handleClick = (itemId) => {
     if (type === "folder") {
       dispatch(changeFolder(itemId));
       navigate(`/dashboard/folder/${itemId}`);
@@ -19,20 +19,19 @@ const ShowItems = ({ title, items, type }) => {
     }
   };
 
+  // Sort items by name in ascending order
+  const sortedItems = items.slice().sort((a, b) => a.data?.name.localeCompare(b.data?.name));
+
   return (
     <div className='show-items'>
-      
       <div className="items-container">
-        {items.map((item, index) => (
+        {sortedItems.map((item, index) => (
           <div
             key={index * 55}
             className={`show-item ${type === 'file' ? 'file' : ''}`}
-            onClick={() => handleDoubleClick(item.docId)}
+            onClick={() => handleClick(item.docId)}
           >
-           
- 
             <img src={type === 'file' ? "../../../../public/assets/file-icon.png" : "../../../../public/assets/folder-icon.png"} alt={type === 'file' ? "File Icon" : "Folder Icon"} />
-
             <span>{item.data?.name}</span>
           </div>
         ))}
