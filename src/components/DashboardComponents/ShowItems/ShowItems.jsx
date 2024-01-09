@@ -10,7 +10,7 @@ const ShowItems = ({ title, items, type }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleDoubleClick = (itemId) => {
+  const handleClick = (itemId) => {
     if (type === "folder") {
       dispatch(changeFolder(itemId));
       navigate(`/dashboard/folder/${itemId}`);
@@ -19,31 +19,16 @@ const ShowItems = ({ title, items, type }) => {
     }
   };
 
-  const handleRightClick = (event,itemId) => {
-  console.log(itemId+"fileid from showitem components")
-    event.preventDefault(); // Prevent the default context menu from showing up
-  //  const fileId = currentFile.docId; 
-  if (type !== "folder") {
-  navigate(`/dashboard/file/${itemId}/deletefile`);
-    }else {alert("You can not delete folder !send delete request through Google form")}
-  };
-
-
   return (
     <div className='show-items'>
-      
       <div className="items-container">
-        {items.map((item, index) => (
+        {sortedItems.map((item, index) => (
           <div
             key={index * 55}
             className={`show-item ${type === 'file' ? 'file' : ''}`}
             onClick={() => handleDoubleClick(item.docId)}
-            onContextMenu={(event) => handleRightClick(event, item.docId)}
           >
-           
- 
             <img src={type === 'file' ? "../../../../public/assets/file-icon.png" : "../../../../public/assets/folder-icon.png"} alt={type === 'file' ? "File Icon" : "Folder Icon"} />
-
             <span>{item.data?.name}</span>
           </div>
         ))}
