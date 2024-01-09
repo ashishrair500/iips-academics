@@ -11,6 +11,8 @@ import { Routes, Route } from 'react-router-dom';
 import FolderComponent from '../../components/DashboardComponents/FolderComponent/FolderComponent';
 import CreateFile from '../../components/DashboardComponents/CreateFile/CreateFile';
 import FileComponent from '../../components/DashboardComponents/FileComponent/FileComponent';
+import FileComponentDelete from '../../components/DashboardComponents/FileComponent/FileComponentDelete';
+
 import UploadFile from '../../components/DashboardComponents/UploadFile/UploadFile';
 import './DashboardPage.css';
 
@@ -95,6 +97,7 @@ const DashboardPage = () => {
         <Route path="" element={<HomeComponent />} />
         <Route path="folder/:folderId" element={<FolderComponent />} />
         <Route path="file/:fileId" element={<FileComponent />} />
+        <Route path="file/:fileId/deletefile" element={<FileComponentDelete />} />
       </Routes>
 
       <Footer />

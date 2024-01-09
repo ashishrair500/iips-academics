@@ -15,9 +15,19 @@ const ShowItems = ({ title, items, type }) => {
       dispatch(changeFolder(itemId));
       navigate(`/dashboard/folder/${itemId}`);
     } else {
-      navigate(`/dashboard/file/${itemId}`);
+      navigate(`/dashboard/file/${itemId}`); //isse nested routes ki help se fileComponent render hota hai them fileid ya currentFile milti
     }
   };
+
+  const handleRightClick = (event,itemId) => {
+  console.log(itemId+"fileid from showitem components")
+    event.preventDefault(); // Prevent the default context menu from showing up
+  //  const fileId = currentFile.docId; 
+  if (type !== "folder") {
+  navigate(`/dashboard/file/${itemId}/deletefile`);
+    }else {alert("You can not delete folder !send delete request through Google form")}
+  };
+
 
   return (
     <div className='show-items'>
@@ -28,6 +38,7 @@ const ShowItems = ({ title, items, type }) => {
             key={index * 55}
             className={`show-item ${type === 'file' ? 'file' : ''}`}
             onClick={() => handleDoubleClick(item.docId)}
+            onContextMenu={(event) => handleRightClick(event, item.docId)}
           >
            
  
