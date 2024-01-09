@@ -19,6 +19,15 @@ const ShowItems = ({ title, items, type }) => {
     }
   };
 
+  const handleRightClick = (event,itemId) => {
+    console.log(itemId+"fileid from showitem components")
+      event.preventDefault(); // Prevent the default context menu from showing up
+    //  const fileId = currentFile.docId; 
+    if (type !== "folder") {
+    navigate(`/dashboard/file/${itemId}/deletefile`);
+      }else {alert("You can not delete folder !send delete request through Google form")}
+    };
+
   // Sort items by name in ascending order
   const sortedItems = items.slice().sort((a, b) => a.data?.name.localeCompare(b.data?.name));
 
@@ -30,6 +39,7 @@ const ShowItems = ({ title, items, type }) => {
             key={index * 55}
             className={`show-item ${type === 'file' ? 'file' : ''}`}
             onClick={() => handleClick(item.docId)}
+              onContextMenu={(event) => handleRightClick(event, item.docId)}
           >
             <img src={type === 'file' ? "../../../../public/assets/file-icon.png" : "../../../../public/assets/folder-icon.png"} alt={type === 'file' ? "File Icon" : "Folder Icon"} />
             <span>{item.data?.name}</span>
