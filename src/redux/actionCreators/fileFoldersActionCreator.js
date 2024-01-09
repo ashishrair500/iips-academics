@@ -175,7 +175,12 @@ export const uploadFile =(file,data,setSuccess) =>(dispatch) => {
         uploadFileRef.put(file).on('state_changed', (snapshot) => {
 
             const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-         toast.success("uploading " + progress + "% done");
+          if(progress === 100) {
+                toast.success("uploading " + progress + "% done");
+            }
+            else{
+                toast.error("uploading " + progress + "% done");
+            }
 
 
 }, (err) => {
@@ -204,7 +209,7 @@ export const uploadFile =(file,data,setSuccess) =>(dispatch) => {
 export const deleteFile = (fileId, fileName) => async (dispatch, getState) => {
     try {
       const state = getState();
-      const userId = state.auth.user.uid;
+      const userId = "T3XBsF3xtDMgTRQIi7xVQYqffpe2";
   
       // Log the userId, fileId, and fileName for debugging
       console.log('UserId:', userId);
@@ -212,9 +217,16 @@ export const deleteFile = (fileId, fileName) => async (dispatch, getState) => {
       console.log('FileName:', fileName);
   
       // Delete the file data from Firestore
-      const fileRef = db.collection('users').doc(userId).collection('files').doc(fileId);
-      await fileRef.delete();
-      console.log('Firestore Document Deleted:', fileId);
+      const fileRef = db.collection('files').doc(fileId);
+      await fileRef.delete()
+        .then(() => {
+          console.log('Firestore Document Deleted:', fileId);
+        })
+        .catch((error) => {
+          console.error('Error deleting Firestore document:', error);
+          alert("File already deleted!Please Refresh");
+          throw error; // Rethrow the error to be caught in the outer catch block
+        });
   
       // Delete the file from Firebase Storage using the fileName
       const storageRef = storage.ref(`files/${userId}/${fileName}`);
@@ -225,6 +237,7 @@ export const deleteFile = (fileId, fileName) => async (dispatch, getState) => {
       // Dispatch an action to update the UI (you need to implement this action)
       dispatch(fileDeleted(fileId));
       toast.success('File deleted successfully! Please refresh the page to see the changes');
+      setSuccess(true);
     } catch (error) {
       console.error('Error deleting file:', error.message);
       // You can dispatch an action here to handle errors or show a notification

@@ -15,7 +15,7 @@ const ShowItems = ({ title, items, type }) => {
       dispatch(changeFolder(itemId));
       navigate(`/dashboard/folder/${itemId}`);
     } else {
-      navigate(`/dashboard/file/${itemId}`);
+      navigate(`/dashboard/file/${itemId}`); //isse nested routes ki help se fileComponent render hota hai them fileid ya currentFile milti
     }
   };
 

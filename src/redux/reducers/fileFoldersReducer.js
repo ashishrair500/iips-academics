@@ -59,6 +59,7 @@ const fileFoldersReducer = (state = initialState, action) => {
                   ...state,
                   userFiles: state.userFiles.filter(file => file.docId !== fileIdToDelete),
                 };
+                
         case types.SET_FILE_DATA:
          const {fileId , data} = action.payload;
          const allFiles = [...state.userFiles];
