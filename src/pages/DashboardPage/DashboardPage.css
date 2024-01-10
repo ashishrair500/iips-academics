@@ -10,7 +10,11 @@
   animation: colorTransition 10s linear infinite;
   font-style: italic;
 }
-
+.delete-ins{
+  text-align: center;
+  color: #ffc107;
+  font-size: 1.6em;
+}
 .contribute-button {
   background: linear-gradient(to right, #373b44, #2f3031);
   border: none;

@@ -1,0 +1,152 @@
+/* Custom Navbar */
+.custom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom Navbar Brand */
+  .custom-navbar-brand, .custom-navbar-brand2 {
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffc107;
+  }
+  .custom-navbar-brand:hover, .custom-navbar-brand2:hover {
+    scale: 1.1;;
+  }
+   
+
+  .custom-navbar-brand2 {
+    margin-left:400px;
+    font-weight: bold;
+    font-size: 2rem;
+   
+  }
+ 
+  /* Modified Indicator */
+  .custom-navbar-brand .modified-indicator {
+    margin-left: 0.5rem;
+    color: #ffc107; /* Bootstrap's warning color */
+  }
+  
+  /* Custom Navbar Nav */
+  .custom-navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Custom Nav Item */
+  .custom-nav-item {
+    margin-right: 1rem;
+  }
+  
+  /* Custom Button */
+  .custom-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  .custom-btn2 {
+    margin-top: 1em;
+    margin-left: 1.5em;
+    font-weight: bold;
+    background-color: #fbf7ea;
+    color: black;
+    border-radius: 10px !important;
+  }
+
+ 
+ 
+  .custom-btn2:hover {
+    color: red;
+    scale: 1.2;
+   }
+   
+  
+  /* Save Button */
+  .custom-btn-success {
+    background-color: #28a745; /* Bootstrap's success color */
+    color: #fff;
+  }
+  
+  /* Disabled Save Button */
+  .custom-btn-success:disabled {
+    background-color: #6c757d; /* Bootstrap's secondary color */
+    cursor: not-allowed;
+  }
+  
+  /* Back Button */
+  .custom-btn-dark {
+    background-color: #5badff; /* Bootstrap's dark color */
+    color: #fff;
+  }
+  
+  /* Tooltip */
+  [data-tooltip] {
+    position: relative;
+  }
+  
+  [data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* Position above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 0.25rem 0.5rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  [data-tooltip]:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+ 
+  @media (max-width: 767px) {
+    .custom-navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .custom-navbar-brand {
+      margin-bottom: 1rem;
+    }
+    .custom-navbar-brand2 {
+        margin: 0;
+        font-size: 2em;
+      }
+    
+    .custom-navbar-nav {
+      margin-top: 1rem;
+    }
+  
+    .custom-nav-item {
+      margin-right: 0.5rem;
+    }
+  
+    .custom-btn {
+      margin-top: 0.5rem;
+    }
+    .custom-btn2 {
+      margin-top: 1rem;
+    }
+
+  }

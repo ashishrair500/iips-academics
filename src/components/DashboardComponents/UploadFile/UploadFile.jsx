@@ -8,6 +8,7 @@ import './UploadFile.css';
 
 const UploadFile = ({ setIsFileUploadOpen }) => {
   const [file, setFile] = useState(null);
+  const [success, setSuccess] = useState(false);
   const dispatch = useDispatch();
 
   const { userFiles, user, currentFolder, currentFolderData } = useSelector(
@@ -49,7 +50,7 @@ const UploadFile = ({ setIsFileUploadOpen }) => {
           };
 
           // Use the async/await pattern to wait for the file upload process
-          await dispatch(uploadFile(file, data));
+          await dispatch(uploadFile(file, data,setSuccess));
 
           // Reset the file state after successful upload
           setFile(null);

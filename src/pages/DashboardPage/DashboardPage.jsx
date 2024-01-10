@@ -80,12 +80,14 @@ const DashboardPage = () => {
           ) : (
  
  
-            <p className='search-ins'>Use Sub Bar for Navigation</p>
+            <p className='search-ins'>Use Sub Navbar for Navigation</p>
  
           )}
        
 
-      
+      {userId==="T3XBsF3xtDMgTRQIi7xVQYqffpe2" ?(
+        <h1 className='delete-ins'>Right click on  Any file to delete it</h1>
+      ):(<div></div>)}
         <SubBar
           setIsCreateFolderOpen={setIsCreateFolderOpen}
           setIsCreateFileOpen={setIsCreateFileOpen}
