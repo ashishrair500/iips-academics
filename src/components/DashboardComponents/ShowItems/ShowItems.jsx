@@ -20,12 +20,12 @@ const ShowItems = ({ title, items, type }) => {
   };
 
   const handleRightClick = (event,itemId) => {
-    console.log(itemId+"fileid from showitem components")
+    console.log(itemId+" fileid from showitem components")
       event.preventDefault(); // Prevent the default context menu from showing up
     //  const fileId = currentFile.docId; 
     if (type !== "folder") {
     navigate(`/dashboard/file/${itemId}/deletefile`);
-      }else {alert("You can not delete folder !send delete request through Google form")}
+      }else {navigate(`/dashboard/folder/${itemId}`)}
     };
 
   // Sort items by name in ascending order

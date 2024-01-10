@@ -162,7 +162,7 @@ export const updateFileData = (fileId,data) =>(dispatch) => {
     .update({data})
     .then(()=>{
         dispatch(setFileData({fileId,data}))
-        alert('File updated successfully')
+        toast.success('File updated successfully')
     }).catch((err)=>{
         console.log(err)
     })
@@ -236,7 +236,7 @@ export const deleteFile = (fileId, fileName) => async (dispatch, getState) => {
   
       // Dispatch an action to update the UI (you need to implement this action)
       dispatch(fileDeleted(fileId));
-      toast.success('File deleted successfully! Please refresh the page to see the changes');
+      toast.success('File deleted successfully ! 👍😎, Please refresh to see changes. ');
       setSuccess(true);
     } catch (error) {
       console.error('Error deleting file:', error.message);

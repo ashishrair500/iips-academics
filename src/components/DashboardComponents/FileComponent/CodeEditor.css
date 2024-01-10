@@ -1,0 +1,47 @@
+/* Code Editor Styles */
+.code-editor-row {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  
+  .code-editor-container {
+    
+    
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+  }
+  
+  .code-input {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  
+  .code-output {
+    margin-top: 1rem;
+    overflow-x: auto;
+  }
+  
+  /* Syntax Highlighter Styles */
+  .code-output pre {
+    margin: 0;
+    white-space: pre-wrap;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 767px) {
+    .code-editor-container {
+      padding: 0.5rem;
+    }
+  
+    .code-input {
+      padding: 0.25rem;
+    }
+  
+    .code-output {
+      margin-top: 0.5rem;
+    }
+  }
+  

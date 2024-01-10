@@ -92,7 +92,14 @@ const Subbar = ({
                   </button>
                 </li>
                
-                
+                <li className="nav-item mx-2">
+                  <button
+                    className="btn btn-outline-dark"
+                    onClick={() => setIsCreateFileOpen(true)}
+                  >
+                    <FontAwesomeIcon icon={faFileAlt} /> &nbsp; Create File
+                  </button>
+                </li>
             
           </ul>
         </>

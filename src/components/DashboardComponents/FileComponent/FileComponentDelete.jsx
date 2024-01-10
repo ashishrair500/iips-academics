@@ -33,7 +33,7 @@ const FileComponentDelete = () => {
       setFileData(currentFile.data.data);
     }
   }, [currentFile, currentFile?.data.data]);
-  console.log(currentFile.docId+"fileId from filecomponentDelete");
+  console.log(currentFile.docId+" fileId from file component Delete");
 
   const handleDeleteFile = () => {
 
@@ -45,8 +45,9 @@ const FileComponentDelete = () => {
     console.log('FileName:', fileName);
   
     dispatch(deleteFile(fileId, fileName));   //yaha se ye redux ko bhejega ki iss id ki file ko delete kr do.
-    navigate(-1);
-    window.location.reload(true);
+    
+    //  window.location.reload(true);
+     navigate(`/dashboard/folder/${currentFile.data.parent}`);
   };
   
   
