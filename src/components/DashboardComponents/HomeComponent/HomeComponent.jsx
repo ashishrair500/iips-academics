@@ -20,7 +20,7 @@ const HomeComponent = () => {
         <>
           <ShowItems title={"Choose Course"} type={"folder"} items={userFolders} />
           {currentFolder !== "root" ? (
-            <ShowItems title={"Notes"} type={"file"} items={userFiles.filter((file) => file.data.data === null)} />
+            <ShowItems title={"Notes"} type={"file"} items={userFiles.file?.data?.data  } />
           ) : (
             <h1></h1>
           )}

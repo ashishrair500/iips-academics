@@ -38,7 +38,7 @@ const HomePage = () => {
                   We devoted to make this a platform where
                   respective faculties can upload their study material
                   ,suggested online links, referenced
-                  vedios links and others things which will
+                  videos links and others things which will
                   be easier for the students to get authenticate
                   academics  materials.
                   we welcomes faculties and students for
