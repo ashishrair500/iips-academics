@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './Contributer.css'; // Import your CSS file
+import './Contributor.css'; // Import your CSS file
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import axios from 'axios'; // Import axios
 
-const Contributer = () => {
+const Contributor = () => {
   // State to store contributors data
   const [contributorsData, setContributorsData] = useState([]);
 
@@ -81,7 +81,7 @@ const Contributer = () => {
         </table>
         <div className="thank-you-note">
           <p>
-            Dear Contributer, Thank you so much.🙂
+            Dear Contributor, Thank you so much.🙂
           </p>
           <p>
             Your contribution is the Big help for all IIPS students. 👍
@@ -93,4 +93,4 @@ const Contributer = () => {
   );
 };
 
-export default Contributer;
+export default Contributor;

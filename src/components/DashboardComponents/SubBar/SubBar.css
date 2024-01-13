@@ -10,10 +10,10 @@
   border: none;
   outline: none;
   box-shadow: none;
-  color: blue;
+  color: #007bff;
   font-size: large;
   padding-left: 10px;
-  font-weight: bold;
+  
 }
 
 .breadcrumb-nav:hover {
