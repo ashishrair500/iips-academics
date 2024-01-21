@@ -12,7 +12,7 @@ const AboutUs = () => {
 
       <div className="team-members">
         <div className="team-member">
-          <img src="../../public/assets/my-img.jpg" alt="Sanyam Jain" />
+          <img src="/assets/my-img.jpg" alt="Sanyam Jain" />
           <h3>Sanyam Jain</h3>
           <div className="social-links">
             {/* Add your social media links */}
