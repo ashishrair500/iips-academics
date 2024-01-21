@@ -60,7 +60,9 @@
     transition: background-color 0.3s ease;
   }
   .custom-btn2 {
+
     margin-top: .9em;
+ 
     margin-left: 1.5em;
     font-weight: bold;
     background-color: #fbf7ea;
