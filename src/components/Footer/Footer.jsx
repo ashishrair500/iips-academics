@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className='column'>
           <ul>
-            <li><a href="https://drive.google.com/file/d/175LfQtejcTzsOa7-eKU41m-gJ-3Jqejq/view?usp=drive_link"target="_blank">Academic Calendar</a></li>
+            <li><a href="https://drive.google.com/file/d/1bgUJrETbFwL2FQnayw0HXDE14bIpNUbp/view?usp=drivesdk"target="_blank">Academic Calendar</a></li>
             <li><a href="https://drive.google.com/file/d/1SOP1oO4tKTByTqBKoXsoJCk1Is094DXz/view"target="_blank">Upcoming Exam Time Tables</a></li>
             <li><a href="https://davv.mponline.gov.in/Portal/services/DAVVDASHBOARD/DAVVHOME.aspx"target="_blank">DAVV MPONLINE</a></li>
             
