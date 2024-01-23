@@ -51,7 +51,7 @@ const Navbar = () => {
                 </Link>
           )}
                  
-                <img src="../../../../public/assets/home-icon.png" alt="Home" />
+                <img src="/assets/home-icon.png" alt="Home" />
               </li>
           
            
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <button className='logout-btn' onClick={() => dispatch(signOutUser())}>
               
                 Logout
-                <img src="../../../public/assets/log-out.png" alt="log out" width="70px" />
+                <img src="/assets/log-out.png" alt="log out" width="70px" />
       
                 </button>
               </li>
@@ -69,7 +69,7 @@ const Navbar = () => {
               <li className='nav-item'>
               <p className='user-welcome'>
                 <span className='user-name'>{user.displayName?.toUpperCase()}</span>
-                <img className='user-icon' src="../../../../public/assets/user-icon.png" alt="Admin" />
+                <img className='user-icon' src="/assets/user-icon.png" alt="Admin" />
               </p>
             </li>
             )}
@@ -79,13 +79,13 @@ const Navbar = () => {
             <li className='nav-item'>
               <Link className='login-btn' to='/login'>
                 Sign In
-                <img src="../../../public/assets/sign-in_icon.png" alt="Sign In" width="70px" />
+                <img src="/assets/sign-in_icon.png" alt="Sign In" width="70px" />
               </Link>
             </li>
             <li className='nav-item'>
               <Link className='register-btn' to='/Register'>
                 Sign Up
-                <img src="../../../public/assets/sign-up_icon.jpg" alt="Sign In" width="70px" />
+                <img src="/assets/sign-up_icon.jpg" alt="Sign In" width="70px" />
               </Link>
             </li>
           </>

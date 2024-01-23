@@ -67,12 +67,16 @@ const Contributor = () => {
                 <td>{contributor.name}</td>
                 <td>
                   <a href={contributor.linkedin} target="_blank" rel="noopener noreferrer">
-                    <img src="../../../public/assets/linkedin.svg" alt="LinkedIn" width="auto" height="35" />
+ 
+                    <img src="/assets/linkedin.svg" alt="LinkedIn" width="auto" height="35" />
+ 
                   </a>
                 </td>
                 <td>
                   <a href={contributor.github} target="_blank" rel="noopener noreferrer">
-                    <img src="../../../public/assets/github.svg" alt="GitHub" width="auto" height="40" />
+ 
+                    <img src="/assets/github.svg" alt="GitHub" width="auto" height="40" />
+ 
                   </a>
                 </td>
               </tr>
