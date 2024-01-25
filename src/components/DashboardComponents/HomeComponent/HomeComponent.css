@@ -2,17 +2,92 @@
 
 /* Add your custom styles here */
 
-/* Example styles: Modify or add your own styles based on your design */
-.display-1 {
-    color: #ffc107; /* Icon color */
-    font-size: 2rem; /* Icon size */
-    transition: font-size 0.3s ease, color 0.3s ease; /* Transition on hover */
+/* Styles for the loading container */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh; /* Adjust as needed */
+  flex-direction: column;
+}
+
+/* Styles for the loading title */
+.loading-title {
+  font-size: 3rem; /* Equivalent to display-3 */
+  text-align: center;
+  color: #4de7ff; /* Equivalent to text-info */
+}
+
+.spinner {
+  margin: auto;
+  margin-top: 70px !important;
+  width: 150px;
+  height: 150px;
+  animation: spinner-y0fdc1 3s infinite ease;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.spinner > div {
+  background-color: rgba(71, 75, 255, 0.2);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 2.2px solid #474bff;
+}
+
+.spinner div:nth-of-type(1) {
+  transform: translateZ(-22.4px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+  transform: translateZ(22.4px);
+}
+
+@keyframes spinner-y0fdc1 {
+  0% {
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
   }
-  
-  .display-1:hover {
-    font-size: 2.5rem; /* Increased size on hover */
-    text-shadow: 0 0 10px rgba(255, 193, 7, 0.7); /* Glow effect on hover */
+
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
   }
-  
-  /* Add more styles as needed for your specific design */
-  
+
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .loading-title {
+    font-size: 2rem;
+  }
+
+  .spinner {
+    width: 130px;
+    height: 130px;
+    margin-top: 70px !important;
+  }
+}
+
+/* Add more media queries as needed for other screen sizes */
