@@ -179,7 +179,7 @@ export const uploadFile =(file,data,setSuccess) =>(dispatch) => {
                 toast.success("uploading " + progress + "% done");
             }
             else{
-                toast.error("uploading " + progress + "% done");
+                toast.info("uploading " + progress + "% done");
             }
 
 
